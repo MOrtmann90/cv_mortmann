@@ -1,14 +1,242 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Mauro Ortmann</title>
-    <link rel="stylesheet" href="src/main.css">
-</head>
-<body>
-    <h1>Currículum Vitae</h1>
-    <h2>Mauro Ortmann</h2>
-</body>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>M Ortmann CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="src/main.css" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER - ONLY MD -->
+    <div class="lg:hidden bg-zinc-900 w-full flex justify-between px-2 my-auto">
+      <button
+        data-drawer-target="default-sidebar"
+        data-drawer-toggle="default-sidebar"
+        aria-controls="default-sidebar"
+        type="button"
+        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg hover:bg-gray-100"
+      >
+        <span class="sr-only">Open sidebar</span>
+        <i class="fa-solid fa-bars text-xl cursor-pointer"></i>
+      </button>
+    </div>
+    <!-- SIDEBAR -->
+    <aside
+      id="default-sidebar"
+      class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full lg:translate-x-0 shadow-xl shadow-neutral-800"
+      aria-label="Sidebar"
+    >
+      <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+        <div class="text-gray-100 text-xl">
+          <img
+            class="hidden w-3/4 mx-auto lg:block rounded-full aspect-square border-4 border-sky-600 object-cover"
+            src="img/perfil.jpg"
+            alt=""
+          />
+          <div class="p-2.5 mt-1 flex lg:flex-column items-center lg:w-full">
+            <h1 class="font-normal text-gray-200 text-lg ml-3 lg:mx-auto">
+              Mauro Ortmann
+            </h1>
+            <button
+              data-drawer-target="default-sidebar"
+              data-drawer-toggle="default-sidebar"
+              aria-controls="default-sidebar"
+              type="button"
+            >
+              <span class="sr-only">Open sidebar</span>
+              <i class="fa-solid fa-xmark ml-20 cursor-pointer lg:hidden"></i>
+            </button>
+          </div>
+          <hr class="my-2 text-gray-600 border-sky-600" />
+        </div>
+        <ul class="text-slate-50 my-10 text-center">
+          <a class="transition ease-in delay-100" href="#home">
+            <li
+              class="hover:bg-sky-600 transition ease-in delay-100 p-2 rounded-lg my-1"
+            >
+              Inicio
+            </li>
+          </a>
+
+          <a class="transition ease-in delay-100" href="#about">
+            <li
+              class="hover:bg-sky-600 transition ease-in delay-100 p-2 rounded-lg my-1"
+            >
+              Acerca de mí
+            </li>
+          </a>
+
+          <a class="transition ease-in delay-100" href="#services">
+            <li
+              class="hover:bg-sky-600 transition ease-in delay-100 p-2 rounded-lg my-1"
+            >
+              ¿Qué hago?
+            </li>
+          </a>
+
+          <a href="#sum">
+            <li
+              class="hover:bg-sky-600 transition ease-in delay-100 p-2 rounded-lg my-1"
+            >
+              Resumen
+            </li>
+          </a>
+
+          <a class="transition ease-in delay-100" href="#portfolio">
+            <li
+              class="hover:bg-sky-600 transition ease-in delay-100 p-2 rounded-lg my-1"
+            >
+              Portfolio
+            </li>
+          </a>
+
+          <a class="transition ease-in delay-100" href="#contact">
+            <li
+              class="hover:bg-sky-600 transition ease-in delay-100 p-2 rounded-lg my-1"
+            >
+              Contacto
+            </li>
+          </a>
+        </ul>
+      </div>
+    </aside>
+    <!-- SECTION 1-->
+    <section id="home" class="p-4 lg:ml-64 bg-[#262e35] bg-contour h-screen">
+      <div
+        class="h-full text-slate-50 text-center flex flex-col justify-center"
+      >
+        <p class="text-xl my-1">Hola!</p>
+        <p class="text-xl my-1">mi nombre es</p>
+        <h1 class="text-6xl font-bold my-10">Mauro Ortmann</h1>
+        <p class="text-xl my-1">y este es mi CV</p>
+        <button
+          class="w-min border py-2 px-4 mx-auto my-20 rounded-full border-sky-600 hover:bg-sky-600 transition ease-in delay-150"
+        >
+          Escribime!
+        </button>
+        <i
+          class="fa-solid fa-angle-down text-slate-50 text-xl absolute inset-x-0 bottom-10 ml-64"
+        ></i>
+      </div>
+    </section>
+    <!-- SECTION 2-->
+    <section
+      id="about"
+      class="bg-gray-800 h-screen p-4 lg:ml-64 flex flex-col justify-between"
+    >
+      <div class="flex text-center my-5 relative">
+        <h2
+          class="text-9xl font-bold text-gray-900 opacity-50 text-uppercase w-full mb-0"
+        >
+          SOBRE MÍ
+        </h2>
+        <p
+          class="text-5xl text-slate-50 absolute mx-auto self-center inset-x-0 top-8 z-1"
+        >
+          Conozcámosnos<span
+            class="border-sky-600 border-2 block w-1/5 mx-auto my-1"
+          ></span>
+        </p>
+      </div>
+      <div class="text-slate-50 text-center flex justify-center p-20">
+        <div class="w-4/5 text-left">
+          <h3 class="text-3xl mb-3">Soy Mauro, analista de datos espaciales</h3>
+          <p class="text-lg pr-4">
+            Trabajo en todo el <span data-tooltip-target="tooltip-default">ciclo de vida del dato </span> aunque me especializo en Infraestructuras de Datos Espaciales (IDE).  Me defino como una persona con un perfil altamente proactivo y siempre dispuesto a nuevos desafíos que expandan mi horizonte personal y profesional. Poseo conocimientos en bases de datos, servidores de mapas web, desarrollo frontend, procesamiento de datos para la obtención de información y comunicación de la Información Geográfica.
+          </p>
+          <div id="tooltip-default" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-gray-900 transition-opacity duration-300 bg-sky-400 rounded-lg shadow-sm opacity-0 tooltip dark:bg-sky-400">
+            Captura, almacenamiento, procesamiento y reutilización
+            <div class="tooltip-arrow" data-popper-arrow></div>
+        </div>
+        </div>
+        <div class="w-1/5">
+          <div class="text-left">
+            <span>Nombre: Mauro Ortmann</span>
+            <hr class="my-3" />
+            <span
+              >Email:
+              <a class="text-sky-400" href="mailto:mauro.ortmann@gmail.com"
+                >mauro.ortmann@gmail.com</a
+              ></span
+            >
+            <hr class="my-3" />
+            <span>Edad: 33 años</span>
+          </div>
+          <button
+            class="w-3/5 border py-2 px-4 mx-auto my-10 rounded-full border-sky-600 hover:bg-sky-600 transition ease-in delay-150"
+          >
+            Descargar CV
+          </button>
+        </div>
+      </div>
+      <div class="w-4/5 flex justify-between mx-auto mb-20 text-sky-400">
+        <div class="text-center">
+          <h4 class="text-5xl font-bold mb-5">
+            <span class="counter" data-from="0" data-to="8">8</span>+
+          </h4>
+          <p class="text-xl text-slate-50">Años de experiencia</p>
+        </div>
+        <span class="border border-gray-600"></span>
+        <div class="text-center">
+          <h4 class="text-5xl font-bold mb-5">
+            <span class="counter" data-from="0" data-to="10">10</span>+
+          </h4>
+          <p class="text-xl text-slate-50">Años de experiencia</p>
+        </div>
+        <span class="border border-gray-600"></span>
+        <div class="text-center">
+          <h4 class="text-5xl font-bold mb-5">
+            <span class="counter" data-from="0" data-to="10">10</span>+
+          </h4>
+          <p class="text-xl text-slate-50">Años de experiencia</p>
+        </div>
+        <span class="border border-gray-600"></span>
+        <div class="text-center">
+          <h4 class="text-5xl font-bold mb-5">
+            <span class="counter" data-from="0" data-to="10">10</span>+
+          </h4>
+          <p class="text-xl text-slate-50">Años de experiencia</p>
+        </div>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 p-4 lg:ml-64 text-center text-slate-50">
+      <p>&#169; Mauro Ortmann 2023</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+    <script>
+      const $collapseEl = document.querySelector("#navbar-collapse-basic");
+      const $scrollSpyEl = document.querySelector(
+        '[data-hs-scrollspy="#scrollspy-1"]'
+      );
+
+      $scrollSpyEl.addEventListener("scroll.hs.scrollspy", () => {
+        if (
+          window.outerWidth <= 639 &&
+          $collapseEl.classList.contains("open")
+        ) {
+          HSCollapse.hide($collapseEl);
+        }
+      });
+    </script>
+  </body>
 </html>
