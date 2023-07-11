@@ -4,11 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>M Ortmann CV</title>
+    <!-- TAILWIND -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- GOOGLE FONT -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <!-- FONT AWESOME -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -17,10 +20,15 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="src/main.css" />
-
+    <!-- FLOWBITE -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css"
       rel="stylesheet"
+    />
+    <!-- FLAGS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"
     />
   </head>
 
@@ -44,7 +52,7 @@
       class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full lg:translate-x-0 shadow-xl shadow-neutral-800"
       aria-label="Sidebar"
     >
-      <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+      <div class="h-full px-3 py-4 overflow-y-auto bg-gray-800 flex flex-col">
         <div class="text-gray-100 text-xl">
           <img
             class="hidden w-3/4 mx-auto lg:block rounded-full aspect-square border-4 border-sky-600 object-cover"
@@ -67,61 +75,85 @@
           </div>
           <hr class="my-2 text-gray-600 border-sky-600" />
         </div>
-        <ul class="text-slate-50 my-10 text-center">
-          <a class="transition ease-in delay-100" href="#home">
-            <li
-              class="hover:bg-sky-600 transition ease-in delay-100 p-2 rounded-lg my-1"
-            >
-              Inicio
-            </li>
-          </a>
-
-          <a class="transition ease-in delay-100" href="#about">
-            <li
-              class="hover:bg-sky-600 transition ease-in delay-100 p-2 rounded-lg my-1"
-            >
-              Sobre mí
-            </li>
-          </a>
-
-          <a class="transition ease-in delay-100" href="#profile">
-            <li
-              class="hover:bg-sky-600 transition ease-in delay-100 p-2 rounded-lg my-1"
-            >
-              Perfil profesional
-            </li>
-          </a>
-
-          <a href="#experience">
-            <li
-              class="hover:bg-sky-600 transition ease-in delay-100 p-2 rounded-lg my-1"
-            >
-              Experiencia
-            </li>
-          </a>
-
-          <a class="transition ease-in delay-100" href="#portfolio">
-            <li
-              class="hover:bg-sky-600 transition ease-in delay-100 p-2 rounded-lg my-1"
-            >
-              Portfolio
-            </li>
-          </a>
-
-          <a class="transition ease-in delay-100" href="#contact">
-            <li
-              class="hover:bg-sky-600 transition ease-in delay-100 p-2 rounded-lg my-1"
-            >
-              Contacto
-            </li>
-          </a>
-        </ul>
+        <div class="flex flex-col justify-between h-full py-auto">
+          <div class="">
+            <ul class="text-slate-50 my-10 text-center">
+              <a class="transition ease-in delay-100" href="#home">
+                <li
+                  class="hover:bg-sky-600 transition ease-in delay-100 p-2 rounded-lg my-1"
+                >
+                  Inicio
+                </li>
+              </a>
+              <a class="transition ease-in delay-100" href="#about">
+                <li
+                  class="hover:bg-sky-600 transition ease-in delay-100 p-2 rounded-lg my-1"
+                >
+                  Sobre mí
+                </li>
+              </a>
+              <a class="transition ease-in delay-100" href="#profile">
+                <li
+                  class="hover:bg-sky-600 transition ease-in delay-100 p-2 rounded-lg my-1"
+                >
+                  Perfil profesional
+                </li>
+              </a>
+              <a href="#experience">
+                <li
+                  class="hover:bg-sky-600 transition ease-in delay-100 p-2 rounded-lg my-1"
+                >
+                  Experiencia
+                </li>
+              </a>
+              <a class="transition ease-in delay-100" href="#portfolio">
+                <li
+                  class="hover:bg-sky-600 transition ease-in delay-100 p-2 rounded-lg my-1"
+                >
+                  Portfolio
+                </li>
+              </a>
+              <a class="transition ease-in delay-100" href="#contact">
+                <li
+                  class="hover:bg-sky-600 transition ease-in delay-100 p-2 rounded-lg my-1"
+                >
+                  Contacto
+                </li>
+              </a>
+            </ul>
+          </div>
+          <!-- ================================DESACTIVADO POR AHORA================================ -->
+          <div
+            id="lang-selector"
+            class="relative text-slate-50 w-full flex gap-3 justify-center mx-auto my-5 hidden"
+          >
+            <input
+              type="checkbox"
+              name=""
+              id="lang-switch"
+              onclick="switchLang()"
+              class="peer absolute w-3/5 top-1 opacity-0 cursor-pointer z-10"
+            />
+            <div class="font-extrabold peer-checked:font-light">
+              <span class="fi fi-ar"></span>
+              <span>ESP</span>
+            </div>
+            <div class="font-light peer-checked:font-extrabold">
+              <span>ENG</span>
+              <span class="fi fi-us"></span>
+            </div>
+          </div>
+          <!-- ================================DESACTIVADO POR AHORA================================ -->
+        </div>
       </div>
     </aside>
     <!--HOME-->
-    <section id="home" class="p-4 lg:ml-64 bg-[#262e35] bg-contour h-screen">
+    <section
+      id="home"
+      class="p-4 lg:ml-64 bg-[#262e35] bg-contour h-screen flex flex-col"
+    >
       <div
-        class="h-full text-slate-50 text-center flex flex-col justify-center"
+        class="text-slate-50 text-center flex flex-col justify-center h-full"
       >
         <p class="text-xl my-1">Hola!</p>
         <p class="text-xl my-1">mi nombre es</p>
@@ -132,9 +164,22 @@
         >
           Escribime!
         </button>
-        <i
-          class="fa-solid fa-angle-down text-slate-50 text-xl absolute inset-x-0 bottom-10 ml-64"
-        ></i>
+      </div>
+      <div class="flex flex-col mb-10 mx-auto justify-center text-center">
+        <a href="#about">
+          <div
+            id="mouse"
+            class="border-2 w-5 h-8 mb-3 rounded-lg flex justify-center"
+          >
+            <div
+              id="scroll"
+              class="mt-1.5 w-1 h-2 border-2 rounded-md animate-bounce border-sky-400"
+            ></div>
+          </div>
+          <i
+            class="fa-solid fa-angles-down text-sky-400 text-xl animate-bounce"
+          ></i>
+        </a>
       </div>
     </section>
     <!--SOBRE MÍ-->
@@ -200,7 +245,9 @@
           <button
             class="w-3/5 border py-2 px-4 mx-auto my-10 rounded-full border-sky-600 hover:bg-sky-600 transition ease-in delay-150"
           >
-            Descargar CV<i class="fa-solid fa-file-arrow-down text-sky-400 ml-3"></i>
+            Descargar CV<i
+              class="fa-solid fa-file-arrow-down text-sky-400 ml-3"
+            ></i>
           </button>
         </div>
       </div>
@@ -237,7 +284,7 @@
     <!-- PERFIL PROFESIONAL -->
     <section
       id="profile"
-      class="bg-gray-700 p-4 lg:ml-64 flex flex-col justify-between"
+      class="bg-gray-700 p-4 lg:ml-64 flex flex-col justify-between min-h-screen"
     >
       <div class="flex text-center my-5 relative">
         <h2
@@ -755,16 +802,75 @@
             </li>
           </ol>
         </div>
-        <div class="w-2/6 m-auto">
-          <div class="text-center text-3xl">
-            <h4>¿Te gustaría conocer más de mi trayectoria profesional?</h4>
+        <div class="flex flex-col w-2/6 mx-auto">
+          <div class="h-1/2">
+            <h5 class="text-2xl mb-5">Links de interés</h5>
+
+            <div class="flex justify-around">
+              <a href="http://mapa.tandil.gov.ar/IdeTandil/">
+                <figure>
+                  <img
+                    src=""
+                    alt=""
+                    class="border-gray-600 rounded-lg h-20 w-[200px]"
+                  />
+                  <figcaption>IDE Tandil</figcaption>
+                </figure>
+              </a>
+              <a href="https://ciudad3d.buenosaires.gob.ar/">
+                <figure>
+                  <img
+                    src=""
+                    alt=""
+                    class="border-gray-600 rounded-lg h-20 w-[200px]"
+                  />
+                  <figcaption>IDE Tandil</figcaption>
+                </figure>
+              </a>
+            </div>
           </div>
-          <button
-            class="w-2/5 border py-2 px-4 mx-auto my-10 rounded-full border-sky-600 hover:bg-sky-600 transition ease-in delay-150"
-          >
-            Descargar CV<i class="fa-solid fa-file-arrow-down text-sky-400 ml-3"></i>
-          </button>
+          <div class="h-1/2 my-auto">
+            <div class="text-center">
+              <h4 class="text-3xl">
+                ¿Te gustaría conocer más de mi trayectoria profesional?
+              </h4>
+            </div>
+            <button
+              class="w-2/5 border py-2 px-4 mx-auto my-10 rounded-full border-sky-600 hover:bg-sky-600 transition ease-in delay-150"
+            >
+              Descargar CV<i
+                class="fa-solid fa-file-arrow-down text-sky-400 ml-3"
+              ></i>
+            </button>
+          </div>
         </div>
+      </div>
+    </section>
+    <!-- PERFIL PROFESIONAL -->
+    <section
+      id="portfolio"
+      class="bg-gray-700 p-4 lg:ml-64 flex flex-col justify-between min-h-screen"
+    >
+      <div class="flex text-center my-5 relative">
+        <h2
+          class="text-9xl font-bold text-gray-900 opacity-50 text-uppercase w-full tracking-wider"
+        >
+          PORTFOLIO
+        </h2>
+        <p
+          class="text-5xl text-slate-50 absolute mx-auto self-center inset-x-0 top-8 z-1"
+        >
+          Portfolio<span
+            class="border-sky-600 border-2 block w-1/12 mx-auto my-2"
+          ></span>
+        </p>
+      </div>
+      <div class="text-slate-50 flex flex-col justify-between px-10">
+        
+
+       
+
+        
       </div>
     </section>
     <!-- FOOTER -->
@@ -773,5 +879,10 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+    <script>
+      function switchLang() {
+        console.log("Cambia idioma");
+      }
+    </script>
   </body>
 </html>
