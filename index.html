@@ -30,6 +30,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"
     />
+
+    <style></style>
   </head>
 
   <body>
@@ -76,8 +78,8 @@
           <hr class="my-2 text-gray-600 border-sky-600" />
         </div>
         <div class="flex flex-col justify-between h-full py-auto">
-          <div class="">
-            <ul class="text-slate-50 my-10 text-center">
+          <nav>
+            <ul id="links" class="text-slate-50 my-10 text-center">
               <a class="transition ease-in delay-100" href="#home">
                 <li
                   class="hover:bg-sky-600 transition ease-in delay-100 p-2 rounded-lg my-1"
@@ -106,13 +108,6 @@
                   Experiencia
                 </li>
               </a>
-              <!-- <a class="transition ease-in delay-100" href="#portfolio">
-                <li
-                  class="hover:bg-sky-600 transition ease-in delay-100 p-2 rounded-lg my-1"
-                >
-                  Portfolio
-                </li>
-              </a> -->
               <a class="transition ease-in delay-100" href="#contact">
                 <li
                   class="hover:bg-sky-600 transition ease-in delay-100 p-2 rounded-lg my-1"
@@ -121,7 +116,7 @@
                 </li>
               </a>
             </ul>
-          </div>
+          </nav>
           <!-- ================================DESACTIVADO POR AHORA================================ -->
           <div
             id="lang-selector"
@@ -148,6 +143,7 @@
       </div>
     </aside>
     <!--HOME-->
+
     <section
       id="home"
       class="p-4 lg:ml-64 bg-[#262e35] bg-contour h-screen flex flex-col"
@@ -243,7 +239,6 @@
                 >mauro.ortmann@gmail.com</a
               >
             </span>
-
             <hr class="my-3 border-gray-600" />
             <span>Edad: </span><span class="font-extralight">33 años</span>
           </div>
@@ -288,6 +283,7 @@
         </div>
       </div>
     </section>
+
     <!-- PERFIL PROFESIONAL -->
     <section
       id="profile"
@@ -317,7 +313,6 @@
               ><span class="font-normal"
                 >Técnico en Sistemas de Información Geográfica.</span
               >
-
               <p class="font-extralight pl-6">
                 Facultad de Ciencias Humanas de la Universidad Nacional del
                 Centro de la Provincia de Buenos Aires. Tandil 2016.
@@ -337,11 +332,9 @@
             </li>
           </ul>
         </div>
-
         <div class="my-6">
           <h3 class="font-medium">HABILIDADES</h3>
           <hr class="my-3 border-gray-600" />
-
           <ul class="font-extralight grid grid-cols-3">
             <li>
               <i
@@ -389,7 +382,6 @@
             </li>
           </ul>
         </div>
-
         <div class="my-6">
           <h3 class="font-medium">TECNOLOGÍAS</h3>
           <hr class="my-3 border-gray-600" />
@@ -423,12 +415,10 @@
                 <li>Workbench</li>
               </ul>
             </li>
-
             <li class="font-normal">
               Lenguajes informáticos
               <ul class="font-extralight">
                 <li>HTML</li>
-
                 <li class="relative">
                   CSS
                   <input
@@ -441,49 +431,39 @@
                   <i
                     class="fa-sharp fa-solid fa-circle-minus ml-1 text-sky-400 text-sm align-top pt-[2px] hidden peer-checked:inline-block"
                   ></i>
-
                   <ul class="pl-5 hidden peer-checked:block">
                     <li>Tailwind</li>
                     <li>Bootstrap</li>
                   </ul>
                 </li>
-
                 <li class="relative">
                   JavaScript
-
                   <input
                     type="checkbox"
                     class="absolute top-1 inset-x-0 h-4 w-full opacity-0 z-10 cursor-pointer peer"
                   />
-
                   <i
                     class="fa-sharp fa-solid fa-circle-plus ml-1 text-sky-400 text-sm align-top pt-[1px] peer-checked:hidden"
                   ></i>
-
                   <i
                     class="fa-sharp fa-solid fa-circle-minus ml-1 text-sky-400 text-sm align-top pt-[1px] hidden peer-checked:inline-block"
                   ></i>
-
                   <ul class="pl-5 hidden peer-checked:block">
                     <li>Leaflet</li>
                   </ul>
                 </li>
-
                 <li class="relative">
                   Python
                   <input
                     type="checkbox"
                     class="absolute top-1 inset-x-0 h-4 w-full opacity-0 z-10 cursor-pointer peer"
                   />
-
                   <i
                     class="fa-sharp fa-solid fa-circle-plus ml-1 text-sky-400 text-sm align-top pt-[1px] peer-checked:hidden"
                   ></i>
-
                   <i
                     class="fa-sharp fa-solid fa-circle-minus ml-1 text-sky-400 text-sm align-top pt-[1px] hidden peer-checked:inline-block"
                   ></i>
-
                   <ul class="pl-5 hidden peer-checked:block">
                     <li>Jupyter Notebooks</li>
                     <li>Geopandas</li>
@@ -498,7 +478,6 @@
                     type="checkbox"
                     class="absolute top-1 inset-x-0 h-4 w-full opacity-0 z-10 cursor-pointer peer"
                   />
-
                   <i
                     class="fa-sharp fa-solid fa-circle-plus ml-1 text-sky-400 text-sm align-top pt-[1px] peer-checked:hidden"
                   ></i>
@@ -560,7 +539,6 @@
           ></span>
         </p>
       </div>
-
       <div class="text-slate-50 text-center flex h-full px-10">
         <div
           class="bg-gray-700 w-2/5 rounded-lg mr-4 px-5 py-5 overflow-y-auto h-[650px]"
@@ -578,7 +556,6 @@
                   class="fa-sharp fa-solid fa-briefcase text-sky-400 text-sm"
                 ></i>
               </span>
-
               <div class="px-4">
                 <time class="block text-left text-sm font-normal text-gray-400"
                   >Octubre 2015 - Actualidad</time
@@ -592,14 +569,12 @@
                   Analista en Sistemas de Información Geográfica
                 </p>
               </div>
-
               <i
                 class="fa-sharp fa-solid fa-plus text-sky-400 text-md peer-checked:hidden mt-3"
               ></i>
               <i
                 class="fa-sharp fa-solid fa-minus text-sky-400 text-md hidden peer-checked:inline-block mt-3"
               ></i>
-
               <p
                 class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
               >
@@ -614,7 +589,6 @@
                 class="w-4/5 mx-auto border-dotted border-sky-400 px-4 mt-5 hidden peer-checked:block"
               />
             </li>
-
             <!-- ==================================================OTRO ITEM================================================== -->
             <li class="mb-10 ml-6 relative">
               <input
@@ -628,7 +602,6 @@
                   class="fa-sharp fa-solid fa-briefcase text-sky-400 text-sm"
                 ></i>
               </span>
-
               <div class="px-4">
                 <time class="block text-left text-sm font-normal text-gray-400"
                   >Enero 2021 - Actualidad</time
@@ -642,14 +615,12 @@
                   Coordinador - Área de Geotecnologías
                 </p>
               </div>
-
               <i
                 class="fa-sharp fa-solid fa-plus text-sky-400 text-md peer-checked:hidden mt-3"
               ></i>
               <i
                 class="fa-sharp fa-solid fa-minus text-sky-400 text-md hidden peer-checked:inline-block mt-3"
               ></i>
-
               <p
                 class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
               >
@@ -660,7 +631,8 @@
                 <br /><i
                   class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
                 ></i>
-                Responsable de la Infraestructura de Datos Espaciales. <br /><i
+                Responsable de la Infraestructura de Datos Espaciales.
+                <br /><i
                   class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
                 ></i>
                 Tareas de gestión. Desarrollo frontend de proyectos. <br /><i
@@ -671,7 +643,6 @@
                 ></i>
                 Soporte espacial a la toma de decisiones.
               </p>
-
               <hr
                 class="w-4/5 mx-auto border-dotted border-sky-400 px-4 mt-5 hidden peer-checked:block"
               />
@@ -689,7 +660,6 @@
                   class="fa-sharp fa-solid fa-briefcase text-sky-400 text-sm"
                 ></i>
               </span>
-
               <div class="px-4">
                 <time class="block text-left text-sm font-normal text-gray-400"
                   >Diciembre 2022 - Actualidad</time
@@ -699,19 +669,16 @@
                 >
                   UNCPBA - SpaceSur - Municipio de Quilmes
                 </h3>
-
                 <p class="font-extralight text-left">
                   Integrante de proyecto - Equipo técnico
                 </p>
               </div>
-
               <i
                 class="fa-sharp fa-solid fa-plus text-sky-400 text-md peer-checked:hidden mt-3"
               ></i>
               <i
                 class="fa-sharp fa-solid fa-minus text-sky-400 text-md hidden peer-checked:inline-block mt-3"
               ></i>
-
               <p
                 class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
               >
@@ -741,12 +708,10 @@
                 >Modelado de datos catastrales para la optimización del registro
                 y cartografía.
               </p>
-
               <hr
                 class="w-4/5 mx-auto border-dotted border-sky-400 px-4 mt-5 hidden peer-checked:block"
               />
             </li>
-
             <!-- ==================================================OTRO ITEM================================================== -->
             <li class="mb-10 ml-6 relative">
               <input
@@ -760,7 +725,6 @@
                   class="fa-sharp fa-solid fa-briefcase text-sky-400 text-sm"
                 ></i>
               </span>
-
               <div class="px-4">
                 <time class="block text-left text-sm font-normal text-gray-400"
                   >Agosto 2022 - Actualidad
@@ -771,17 +735,14 @@
                   Universidad Nacional del Centro de la Provincia de Buenos
                   Aires
                 </h3>
-
                 <p class="font-extralight text-left">Ayudante de Primera</p>
               </div>
-
               <i
                 class="fa-sharp fa-solid fa-plus text-sky-400 text-md peer-checked:hidden mt-3"
               ></i>
               <i
                 class="fa-sharp fa-solid fa-minus text-sky-400 text-md hidden peer-checked:inline-block mt-3"
               ></i>
-
               <p
                 class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
               >
@@ -798,12 +759,10 @@
                 profesional al interior de una organización que busca obtener
                 Información Geoespacial en un proyecto concreto.
               </p>
-
               <hr
                 class="w-4/5 mx-auto border-dotted border-sky-400 px-4 mt-5 hidden peer-checked:block"
               />
             </li>
-
             <!-- ==================================================OTRO ITEM================================================== -->
             <li class="mb-10 ml-6 relative">
               <input
@@ -817,7 +776,6 @@
                   class="fa-sharp fa-solid fa-briefcase text-sky-400 text-sm"
                 ></i>
               </span>
-
               <div class="px-4">
                 <time class="block text-left text-sm font-normal text-gray-400"
                   >Marzo 2022 - Actualidad
@@ -827,19 +785,16 @@
                 >
                   UNCPBA - SpaceSur - BID
                 </h3>
-
                 <p class="font-extralight text-left">
                   Integrante de proyecto - Equipo técnico
                 </p>
               </div>
-
               <i
                 class="fa-sharp fa-solid fa-plus text-sky-400 text-md peer-checked:hidden mt-3"
               ></i>
               <i
                 class="fa-sharp fa-solid fa-minus text-sky-400 text-md hidden peer-checked:inline-block mt-3"
               ></i>
-
               <p
                 class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
               >
@@ -864,7 +819,6 @@
                 soluciones satelitales para Catastro e identificación y
                 caracterización del arbolado urbano.
               </p>
-
               <hr
                 class="w-4/5 mx-auto border-dotted border-sky-400 px-4 mt-5 hidden peer-checked:block"
               />
@@ -882,7 +836,6 @@
                   class="fa-sharp fa-solid fa-briefcase text-sky-400 text-sm"
                 ></i>
               </span>
-
               <div class="px-4">
                 <time class="block text-left text-sm font-normal text-gray-400"
                   >Marzo 2022 - Mayo 2023
@@ -892,19 +845,16 @@
                 >
                   UNCPBA - SpaceSur - CONAE
                 </h3>
-
                 <p class="font-extralight text-left">
                   Integrante de proyecto - Equipo técnico
                 </p>
               </div>
-
               <i
                 class="fa-sharp fa-solid fa-plus text-sky-400 text-md peer-checked:hidden mt-3"
               ></i>
               <i
                 class="fa-sharp fa-solid fa-minus text-sky-400 text-md hidden peer-checked:inline-block mt-3"
               ></i>
-
               <p
                 class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
               >
@@ -943,7 +893,6 @@
                 ></i>
                 Implementación de capacitación en el uso del sistema.
               </p>
-
               <hr
                 class="w-4/5 mx-auto border-dotted border-sky-400 px-4 mt-5 hidden peer-checked:block"
               />
@@ -961,7 +910,6 @@
                   class="fa-sharp fa-solid fa-briefcase text-sky-400 text-sm"
                 ></i>
               </span>
-
               <div class="px-4">
                 <time class="block text-left text-sm font-normal text-gray-400"
                   >Octubre 2020 - Marzo 2023
@@ -971,19 +919,16 @@
                 >
                   UNCPBA - SpaceSur - CEPES
                 </h3>
-
                 <p class="font-extralight text-left">
                   Creación de contenido y tutor de formación
                 </p>
               </div>
-
               <i
                 class="fa-sharp fa-solid fa-plus text-sky-400 text-md peer-checked:hidden mt-3"
               ></i>
               <i
                 class="fa-sharp fa-solid fa-minus text-sky-400 text-md hidden peer-checked:inline-block mt-3"
               ></i>
-
               <p
                 class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
               >
@@ -1000,7 +945,6 @@
                   class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
                 ></i
                 >Coordinación de actividades con participantes (5 municipios).
-
                 <br /><i
                   class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
                 ></i>
@@ -1014,7 +958,6 @@
                 Tutoría en proyectos reales para aplicación de capacidades
                 transferidas.
               </p>
-
               <hr
                 class="w-4/5 mx-auto border-dotted border-sky-400 px-4 mt-5 hidden peer-checked:block"
               />
@@ -1032,7 +975,6 @@
                   class="fa-sharp fa-solid fa-briefcase text-sky-400 text-sm"
                 ></i>
               </span>
-
               <div class="px-4">
                 <time class="block text-left text-sm font-normal text-gray-400"
                   >Septiembre 2021 - Septiembre 2022
@@ -1042,19 +984,16 @@
                 >
                   THE BLACK PUMA Ai
                 </h3>
-
                 <p class="font-extralight text-left">
                   Analista Funcional GIS | QA
                 </p>
               </div>
-
               <i
                 class="fa-sharp fa-solid fa-plus text-sky-400 text-md peer-checked:hidden mt-3"
               ></i>
               <i
                 class="fa-sharp fa-solid fa-minus text-sky-400 text-md hidden peer-checked:inline-block mt-3"
               ></i>
-
               <p
                 class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
               >
@@ -1073,7 +1012,6 @@
                 Aires para el cálculo automatizado de volumetrías a partir del
                 Código Urbanístico.
               </p>
-
               <hr
                 class="w-4/5 mx-auto border-dotted border-sky-400 px-4 mt-5 hidden peer-checked:block"
               />
@@ -1091,7 +1029,6 @@
                   class="fa-sharp fa-solid fa-briefcase text-sky-400 text-sm"
                 ></i>
               </span>
-
               <div class="px-4">
                 <time class="block text-left text-sm font-normal text-gray-400"
                   >Septiembre 2021 - Septiembre 2022
@@ -1101,19 +1038,16 @@
                 >
                   UNCPBA - SpaceSur - World Food Programme | United Nations
                 </h3>
-
                 <p class="font-extralight text-left">
                   Tutor de formación | Co-coordinador del programa
                 </p>
               </div>
-
               <i
                 class="fa-sharp fa-solid fa-plus text-sky-400 text-md peer-checked:hidden mt-3"
               ></i>
               <i
                 class="fa-sharp fa-solid fa-minus text-sky-400 text-md hidden peer-checked:inline-block mt-3"
               ></i>
-
               <p
                 class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
               >
@@ -1131,7 +1065,6 @@
                 >Consultoría para aplicación de capacidades transferidas basada
                 en una emergencia real por paso de huracán en Centroamérica.
               </p>
-
               <hr
                 class="w-4/5 mx-auto border-dotted border-sky-400 px-4 mt-5 hidden peer-checked:block"
               />
@@ -1144,7 +1077,6 @@
         <div class="flex flex-col w-2/6 mx-auto">
           <div class="h-1/2">
             <h5 class="text-2xl mb-5">Links de interés</h5>
-
             <div class="flex justify-around">
               <a href="http://mapa.tandil.gov.ar/IdeTandil/" target="_blank">
                 <figure>
@@ -1211,7 +1143,6 @@
           <h4 class="text-2xl mb-10">
             Visitá mi perfil en LinkedIn o escribime un correo
           </h4>
-
           <div class="p-10">
             <a
               href="https://www.linkedin.com/in/mauro-ortmann/"
@@ -1219,7 +1150,7 @@
             >
               <div class="flex items-center hover:opacity-75">
                 <div
-                  class="w-16 h-16 bg-sky-400 rounded-full flex justify-center mr-5"
+                  class="w-16 h-16 bg-sky-600 rounded-full flex justify-center mr-5"
                 >
                   <i
                     class="fa-brands fa-linkedin text-slate-50 text-4xl self-center"
@@ -1230,14 +1161,14 @@
                 >
               </div>
             </a>
-            <hr class="border-sky-400 my-8" />
+            <hr class="border-sky-600 my-8" />
             <a
               href="https://www.linkedin.com/in/mauro-ortmann/"
               target="_blank"
             >
               <div class="flex items-center hover:opacity-75">
                 <div
-                  class="w-16 h-16 bg-sky-400 rounded-full flex justify-center mr-5"
+                  class="w-16 h-16 bg-sky-600 rounded-full flex justify-center mr-5"
                 >
                   <i
                     class="fa-solid fa-envelope text-slate-50 text-4xl self-center"
@@ -1250,6 +1181,7 @@
         </div>
       </div>
     </section>
+
     <!-- FOOTER -->
     <footer
       class="bg-gray-800 p-4 lg:ml-64 text-center text-slate-50 h-[6vh] flex justify-center items-center"
@@ -1262,6 +1194,28 @@
       function switchLang() {
         console.log("Cambia idioma");
       }
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll("nav a");
+
+        window.addEventListener("scroll", function () {
+          const currentScroll = window.pageYOffset + 300;
+
+          navLinks.forEach((link) => {
+            const section = document.querySelector(link.getAttribute("href"));
+
+            if (
+              section.offsetTop <= currentScroll &&
+              section.offsetTop + section.offsetHeight > currentScroll
+            ) {
+              link.classList.add("font-bold");
+            } else {
+              link.classList.remove("font-bold");
+            }
+          });
+        });
+      });
     </script>
   </body>
 </html>
