@@ -30,17 +30,28 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"
     />
+    <!-- bootstrap CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
 
-    <style></style>
+    <style>
+      .active {
+          color: #38bdf8 !important;
+          font-weight: 600;
+          /* background-color: blueviolet !important; */
+      }
+  </style>
   </head>
 
   <body>
     <!-- HEADER - ONLY MD -->
     <div class="lg:hidden bg-zinc-900 w-full flex justify-between px-2 my-auto">
       <button
-        data-drawer-target="default-sidebar"
-        data-drawer-toggle="default-sidebar"
-        aria-controls="default-sidebar"
+        data-drawer-target="sidebar"
+        data-drawer-toggle="sidebar"
+        aria-controls="sidebar"
         type="button"
         class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg hover:bg-gray-100"
       >
@@ -50,7 +61,7 @@
     </div>
     <!-- SIDEBAR -->
     <aside
-      id="default-sidebar"
+      id="sidebar"
       class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full lg:translate-x-0 shadow-xl shadow-neutral-800"
       aria-label="Sidebar"
     >
@@ -66,9 +77,9 @@
               Mauro Ortmann
             </h1>
             <button
-              data-drawer-target="default-sidebar"
-              data-drawer-toggle="default-sidebar"
-              aria-controls="default-sidebar"
+              data-drawer-target="sidebar"
+              data-drawer-toggle="sidebar"
+              aria-controls="sidebar"
               type="button"
             >
               <span class="sr-only">Open sidebar</span>
@@ -78,7 +89,7 @@
           <hr class="my-2 text-gray-600 border-sky-600" />
         </div>
         <div class="flex flex-col justify-between h-full py-auto">
-          <nav>
+          <nav id="navbar">
             <ul id="links" class="text-slate-50 my-10 text-center">
               <a class="transition ease-in delay-100" href="#home">
                 <li
@@ -144,967 +155,104 @@
     </aside>
     <!--HOME-->
 
-    <section
-      id="home"
-      class="p-4 lg:ml-64 bg-[#262e35] bg-contour h-screen flex flex-col"
-    >
-      <div
-        class="text-slate-50 text-center flex flex-col justify-center h-full"
+    <main data-bs-spy="scroll">
+      <section
+        id="home"
+        class="p-4 lg:ml-64 bg-[#262e35] bg-contour h-screen flex flex-col"
       >
-        <p class="text-xl my-1">Hola!</p>
-        <p class="text-xl my-1">mi nombre es</p>
-        <h1 class="text-6xl font-bold my-10">Mauro Ortmann</h1>
-        <p class="text-xl my-1">soy Analista GIS y este es mi CV</p>
-        <a href="#contact">
-          <button
-            class="w-min border py-2 px-4 mx-auto my-20 rounded-full border-sky-600 hover:bg-sky-600 transition ease-in delay-150"
-          >
-            Escribime!
-          </button>
-        </a>
-      </div>
-      <div class="flex flex-col mb-10 mx-auto justify-center text-center">
-        <a href="#about">
-          <div
-            id="mouse"
-            class="border-2 w-5 h-8 mb-3 rounded-lg flex justify-center"
-          >
-            <div
-              id="scroll"
-              class="mt-1.5 w-1 h-2 border-2 rounded-md animate-bounce border-sky-400"
-            ></div>
-          </div>
-          <i
-            class="fa-solid fa-angles-down text-sky-400 text-xl animate-bounce"
-          ></i>
-        </a>
-      </div>
-    </section>
-    <!--SOBRE MÍ-->
-    <section
-      id="about"
-      class="bg-gray-800 h-screen p-4 lg:ml-64 flex flex-col justify-between"
-    >
-      <div class="flex text-center my-5 relative">
-        <h2
-          class="text-9xl font-bold text-gray-900 opacity-50 text-uppercase w-full tracking-wider"
+        <div
+          class="text-slate-50 text-center flex flex-col justify-center h-full"
         >
-          SOBRE MÍ
-        </h2>
-        <p
-          class="text-5xl text-slate-50 absolute mx-auto self-center inset-x-0 top-8 z-1"
-        >
-          Resumen<span
-            class="border-sky-600 border-2 block w-1/12 mx-auto my-2"
-          ></span>
-        </p>
-      </div>
-      <div class="text-slate-50 text-center flex justify-center p-20">
-        <div class="w-4/5 text-left">
-          <h3 class="text-3xl mb-3">Soy Mauro, analista de datos espaciales</h3>
-          <hr class="w-3/5 my-4 border-gray-600" />
-          <p class="text-lg pr-10">
-            Tengo experiencia en las tareas requeridas durante el
-            <span data-tooltip-target="tooltip-default">ciclo de vida </span>
-            completo del dato geográfico, con especial acento en la
-            implementación y mantenimiento del stack necesario para consolidar
-            Infraestructuras de Datos Espaciales (IDE).
-          </p>
-          <br />
-          <p class="text-lg pr-10">
-            Me defino como una persona con un perfil altamente proactivo y
-            siempre dispuesto a nuevos desafíos que expandan mi horizonte
-            personal y profesional. Poseo conocimientos en bases de datos,
-            servidores de mapas web, desarrollo frontend, procesamiento de datos
-            para la obtención de información y comunicación de la Información
-            Geográfica.
-          </p>
-          <div
-            id="tooltip-default"
-            role="tooltip"
-            class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-gray-900 transition-opacity duration-300 bg-sky-400 rounded-lg shadow-sm opacity-0 tooltip dark:bg-sky-400"
-          >
-            Captura, almacenamiento, procesamiento y reutilización
-            <div class="tooltip-arrow" data-popper-arrow></div>
-          </div>
-        </div>
-        <div class="w-1/5">
-          <div class="text-left">
-            <span>Nombre: </span
-            ><span class="font-extralight">Mauro Ortmann</span>
-            <hr class="my-3 border-gray-600" />
-            <span>Email:</span>
-            <span class="font-extralight">
-              <a class="text-sky-400" href="mailto:mauro.ortmann@gmail.com"
-                >mauro.ortmann@gmail.com</a
-              >
-            </span>
-            <hr class="my-3 border-gray-600" />
-            <span>Edad: </span><span class="font-extralight">33 años</span>
-          </div>
-          <a href="src/CV Mauro ortmann Jul2023.pdf" target="_blank">
+          <p class="text-xl my-1">Hola!</p>
+          <p class="text-xl my-1">mi nombre es</p>
+          <h1 class="text-6xl font-bold my-10">Mauro Ortmann</h1>
+          <p class="text-xl my-1">soy Analista GIS y este es mi CV</p>
+          <a href="#contact">
             <button
-              class="w-48 border py-2 px-4 mx-auto my-10 rounded-full border-sky-600 hover:bg-sky-600 transition ease-in delay-150"
+              class="w-min border py-2 px-4 mx-auto my-20 rounded-full border-sky-600 hover:bg-sky-600 transition ease-in delay-150"
             >
-              Descargar CV<i
-                class="fa-solid fa-file-arrow-down text-sky-400 ml-3"
-              ></i>
+              Escribime!
             </button>
           </a>
         </div>
-      </div>
-      <div class="w-4/5 flex justify-between mx-auto mb-20 text-sky-400">
-        <div class="text-center">
-          <h4 class="text-5xl font-bold mb-5">
-            <span class="counter" data-from="0" data-to="8">8</span>+
-          </h4>
-          <p class="text-xl text-slate-50">Años de experiencia</p>
+        <div class="flex flex-col mb-10 mx-auto justify-center text-center">
+          <a href="#about">
+            <div
+              id="mouse"
+              class="border-2 w-5 h-8 mb-3 rounded-lg flex justify-center"
+            >
+              <div
+                id="scroll"
+                class="mt-1.5 w-1 h-2 border-2 rounded-md animate-bounce border-sky-400"
+              ></div>
+            </div>
+            <i
+              class="fa-solid fa-angles-down text-sky-400 text-xl animate-bounce"
+            ></i>
+          </a>
         </div>
-        <span class="border border-gray-600"></span>
-        <div class="text-center">
-          <h4 class="text-5xl font-bold mb-5">
-            <span class="counter" data-from="0" data-to="10">10</span>+
-          </h4>
-          <p class="text-xl text-slate-50">Años de experiencia</p>
+      </section>
+      <!--SOBRE MÍ-->
+      <section
+        id="about"
+        class="bg-gray-800 h-screen p-4 lg:ml-64 flex flex-col justify-between"
+      >
+        <div class="flex text-center my-5 relative">
+          <h2
+            class="text-9xl font-bold text-gray-900 opacity-50 text-uppercase w-full tracking-wider"
+          >
+            SOBRE MÍ
+          </h2>
+          <p
+            class="text-5xl text-slate-50 absolute mx-auto self-center inset-x-0 top-8 z-1"
+          >
+            Resumen<span
+              class="border-sky-600 border-2 block w-1/12 mx-auto my-2"
+            ></span>
+          </p>
         </div>
-        <span class="border border-gray-600"></span>
-        <div class="text-center">
-          <h4 class="text-5xl font-bold mb-5">
-            <span class="counter" data-from="0" data-to="10">10</span>+
-          </h4>
-          <p class="text-xl text-slate-50">Años de experiencia</p>
-        </div>
-        <span class="border border-gray-600"></span>
-        <div class="text-center">
-          <h4 class="text-5xl font-bold mb-5">
-            <span class="counter" data-from="0" data-to="10">10</span>+
-          </h4>
-          <p class="text-xl text-slate-50">Años de experiencia</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- PERFIL PROFESIONAL -->
-    <section
-      id="profile"
-      class="bg-gray-700 p-4 lg:ml-64 flex flex-col justify-between min-h-screen"
-    >
-      <div class="flex text-center my-5 relative">
-        <h2
-          class="text-9xl font-bold text-gray-900 opacity-50 text-uppercase w-full tracking-wider"
-        >
-          PERFIL
-        </h2>
-        <p
-          class="text-5xl text-slate-50 absolute mx-auto self-center inset-x-0 top-8 z-1"
-        >
-          Perfil profesional<span
-            class="border-sky-600 border-2 block w-1/12 mx-auto my-2"
-          ></span>
-        </p>
-      </div>
-      <div class="text-slate-50 flex flex-col justify-between px-10">
-        <div class="my-6">
-          <h3 class="font-medium">FORMACIÓN</h3>
-          <hr class="my-3 border-gray-600" />
-          <ul>
-            <li class="font-light">
-              <i class="fa-sharp fa-solid fa-angles-right text-sky-400 mr-2"></i
-              ><span class="font-normal"
-                >Técnico en Sistemas de Información Geográfica.</span
-              >
-              <p class="font-extralight pl-6">
-                Facultad de Ciencias Humanas de la Universidad Nacional del
-                Centro de la Provincia de Buenos Aires. Tandil 2016.
-              </p>
-            </li>
-            <li class="font-light mt-2">
-              <i class="fa-sharp fa-solid fa-angles-right text-sky-400 mr-2"></i
-              ><span class="font-normal"
-                >Diplomado en Modelos Digitales de Elevaciones (MDE) para el
-                análisis morfológico del terreno y Sistemas de Información
-                Geográfica (SIG).</span
-              >
-              <p class="font-extralight pl-6">
-                Facultad de Filosofía y Letras - Universidad de Filosofía y
-                Letras. Colegio Sholem. Buenos Aires 2019
-              </p>
-            </li>
-          </ul>
-        </div>
-        <div class="my-6">
-          <h3 class="font-medium">HABILIDADES</h3>
-          <hr class="my-3 border-gray-600" />
-          <ul class="font-extralight grid grid-cols-3">
-            <li>
-              <i
-                class="fa-sharp fa-solid fa-circle-check text-sky-400 text-sm mr-2"
-              ></i
-              ><span class="align-middle">Gestión de proyectos</span>
-            </li>
-            <li>
-              <i
-                class="fa-sharp fa-solid fa-circle-check text-sky-400 text-sm mr-2"
-              ></i
-              ><span class="align-middle">Resolución de problemas</span>
-            </li>
-            <li>
-              <i
-                class="fa-sharp fa-solid fa-circle-check text-sky-400 text-sm mr-2"
-              ></i
-              ><span class="align-middle">Pensamiento analítico</span>
-            </li>
-            <li>
-              <i
-                class="fa-sharp fa-solid fa-circle-check text-sky-400 text-sm mr-2"
-              ></i
-              ><span class="align-middle">Análisis espacial de soluciones</span>
-            </li>
-            <li>
-              <i
-                class="fa-sharp fa-solid fa-circle-check text-sky-400 text-sm mr-2"
-              ></i
-              ><span class="align-middle">Comunicación de resultados</span>
-            </li>
-            <li>
-              <i
-                class="fa-sharp fa-solid fa-circle-check text-sky-400 text-sm mr-2"
-              ></i
-              ><span class="align-middle"
-                >Capacidad de trabajo en equipos multidisciplinares</span
-              >
-            </li>
-            <li>
-              <i
-                class="fa-sharp fa-solid fa-circle-check text-sky-400 text-sm mr-2"
-              ></i
-              ><span class="align-middle">Actualización constante</span>
-            </li>
-          </ul>
-        </div>
-        <div class="my-6">
-          <h3 class="font-medium">TECNOLOGÍAS</h3>
-          <hr class="my-3 border-gray-600" />
-          <ul class="flex justify-between">
-            <li class="font-normal">
-              Sistemas de Información Geográfica
-              <ul class="font-extralight">
-                <li>QGIS</li>
-                <li>ArcMap</li>
-                <li>ArcGIS Pro</li>
-                <li>Global Mapper</li>
-              </ul>
-            </li>
-            <li class="font-normal">
-              WebGIS | Visualización
-              <ul class="font-extralight">
-                <li>ArcGIS Online</li>
-                <li>GeoNode 4.0</li>
-                <li>ArgenMap</li>
-                <li>Geoserver</li>
-                <li>Geonetwork</li>
-              </ul>
-            </li>
-            <li class="font-normal">
-              Bases de Datos
-              <ul class="font-extralight">
-                <li>PostgreSQL</li>
-                <li>PostGIS</li>
-                <li>PgAdmin</li>
-                <li>MySQL</li>
-                <li>Workbench</li>
-              </ul>
-            </li>
-            <li class="font-normal">
-              Lenguajes informáticos
-              <ul class="font-extralight">
-                <li>HTML</li>
-                <li class="relative">
-                  CSS
-                  <input
-                    type="checkbox"
-                    class="absolute top-1 inset-x-0 h-4 w-full opacity-0 z-10 cursor-pointer peer"
-                  />
-                  <i
-                    class="fa-sharp fa-solid fa-circle-plus ml-1 text-sky-400 text-sm align-top pt-[1px] peer-checked:hidden"
-                  ></i>
-                  <i
-                    class="fa-sharp fa-solid fa-circle-minus ml-1 text-sky-400 text-sm align-top pt-[2px] hidden peer-checked:inline-block"
-                  ></i>
-                  <ul class="pl-5 hidden peer-checked:block">
-                    <li>Tailwind</li>
-                    <li>Bootstrap</li>
-                  </ul>
-                </li>
-                <li class="relative">
-                  JavaScript
-                  <input
-                    type="checkbox"
-                    class="absolute top-1 inset-x-0 h-4 w-full opacity-0 z-10 cursor-pointer peer"
-                  />
-                  <i
-                    class="fa-sharp fa-solid fa-circle-plus ml-1 text-sky-400 text-sm align-top pt-[1px] peer-checked:hidden"
-                  ></i>
-                  <i
-                    class="fa-sharp fa-solid fa-circle-minus ml-1 text-sky-400 text-sm align-top pt-[1px] hidden peer-checked:inline-block"
-                  ></i>
-                  <ul class="pl-5 hidden peer-checked:block">
-                    <li>Leaflet</li>
-                  </ul>
-                </li>
-                <li class="relative">
-                  Python
-                  <input
-                    type="checkbox"
-                    class="absolute top-1 inset-x-0 h-4 w-full opacity-0 z-10 cursor-pointer peer"
-                  />
-                  <i
-                    class="fa-sharp fa-solid fa-circle-plus ml-1 text-sky-400 text-sm align-top pt-[1px] peer-checked:hidden"
-                  ></i>
-                  <i
-                    class="fa-sharp fa-solid fa-circle-minus ml-1 text-sky-400 text-sm align-top pt-[1px] hidden peer-checked:inline-block"
-                  ></i>
-                  <ul class="pl-5 hidden peer-checked:block">
-                    <li>Jupyter Notebooks</li>
-                    <li>Geopandas</li>
-                    <li>NumPy</li>
-                    <li>Plotly</li>
-                    <li>Folium</li>
-                  </ul>
-                </li>
-                <li class="relative">
-                  R
-                  <input
-                    type="checkbox"
-                    class="absolute top-1 inset-x-0 h-4 w-full opacity-0 z-10 cursor-pointer peer"
-                  />
-                  <i
-                    class="fa-sharp fa-solid fa-circle-plus ml-1 text-sky-400 text-sm align-top pt-[1px] peer-checked:hidden"
-                  ></i>
-                  <i
-                    class="fa-sharp fa-solid fa-circle-minus ml-1 text-sky-400 text-sm align-top pt-[1px] hidden peer-checked:inline-block"
-                  ></i>
-                  <ul class="pl-5 hidden peer-checked:block">
-                    <li>RMarkdown</li>
-                    <li>Flexdashboard</li>
-                    <li>dplyr</li>
-                    <li>sf</li>
-                    <li>DT</li>
-                  </ul>
-                </li>
-                <li>SQL</li>
-              </ul>
-            </li>
-            <li class="font-normal">
-              Bussiness Intelligence
-              <ul class="font-extralight">
-                <li>Metabase</li>
-                <li>Microsoft Excel</li>
-                <li>Power BI</li>
-                <li>IBM SPSS</li>
-              </ul>
-            </li>
-            <li class="font-normal">
-              Otros
-              <ul class="font-extralight">
-                <li>Jira | Redmine | Trello | Slack</li>
-                <li>GitHub</li>
-                <li>Visual Studio Code | RStudio</li>
-                <li>XAMPP</li>
-                <li>AutoCAD Civil 3D</li>
-                <li>Trimble Business Center</li>
-                <li>Pix4D</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <!--EXPERIENCIA-->
-    <section
-      id="experience"
-      class="bg-gray-800 h-screen p-4 lg:ml-64 flex flex-col justify-between"
-    >
-      <div class="flex text-center mt-5 mb-10 relative">
-        <h2
-          class="text-9xl font-bold text-gray-900 opacity-50 text-uppercase w-full tracking-wider"
-        >
-          EXPERIENCIA
-        </h2>
-        <p
-          class="text-5xl text-slate-50 absolute mx-auto self-center inset-x-0 top-8 z-1"
-        >
-          Ejercicio profesional<span
-            class="border-sky-600 border-2 block w-1/12 mx-auto my-2"
-          ></span>
-        </p>
-      </div>
-      <div class="text-slate-50 text-center flex h-full px-10">
-        <div
-          class="bg-gray-700 w-2/5 rounded-lg mr-4 px-5 py-5 overflow-y-auto h-[650px]"
-        >
-          <ol class="border-l border-gray-800 pr-5 ml-5">
-            <li class="mb-10 ml-6 relative">
-              <input
-                type="checkbox"
-                class="peer ver-mas absolute cursor-pointer inset-x-0 w-full h-full h-12 opacity-0"
-              />
-              <span
-                class="absolute flex items-center justify-center w-6 h-6 bg-gray-600 rounded-full -left-9 top-1 ring-8 ring-gray-900 mt-2"
-              >
-                <i
-                  class="fa-sharp fa-solid fa-briefcase text-sky-400 text-sm"
-                ></i>
-              </span>
-              <div class="px-4">
-                <time class="block text-left text-sm font-normal text-gray-400"
-                  >Octubre 2015 - Actualidad</time
-                >
-                <h3
-                  class="flex items-center text-lg font-semibold text-gray-500 text-white"
-                >
-                  Profesional independiente
-                </h3>
-                <p class="font-extralight text-left">
-                  Analista en Sistemas de Información Geográfica
-                </p>
-              </div>
-              <i
-                class="fa-sharp fa-solid fa-plus text-sky-400 text-md peer-checked:hidden mt-3"
-              ></i>
-              <i
-                class="fa-sharp fa-solid fa-minus text-sky-400 text-md hidden peer-checked:inline-block mt-3"
-              ></i>
-              <p
-                class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
-              >
-                <i
-                  class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
-                ></i
-                >Relevamiento, procesamiento y generación de información a
-                demanda a partir de datos geoespaciales para diversas
-                industrias.
-              </p>
-              <hr
-                class="w-4/5 mx-auto border-dotted border-sky-400 px-4 mt-5 hidden peer-checked:block"
-              />
-            </li>
-            <!-- ==================================================OTRO ITEM================================================== -->
-            <li class="mb-10 ml-6 relative">
-              <input
-                type="checkbox"
-                class="peer ver-mas absolute cursor-pointer inset-x-0 w-full h-full h-12 opacity-0"
-              />
-              <span
-                class="absolute flex items-center justify-center w-6 h-6 bg-gray-600 rounded-full -left-9 top-1 ring-8 ring-gray-900 mt-2"
-              >
-                <i
-                  class="fa-sharp fa-solid fa-briefcase text-sky-400 text-sm"
-                ></i>
-              </span>
-              <div class="px-4">
-                <time class="block text-left text-sm font-normal text-gray-400"
-                  >Enero 2021 - Actualidad</time
-                >
-                <h3
-                  class="flex items-center text-lg font-semibold text-gray-500 text-white"
-                >
-                  Municipio de Tandil
-                </h3>
-                <p class="font-extralight text-left">
-                  Coordinador - Área de Geotecnologías
-                </p>
-              </div>
-              <i
-                class="fa-sharp fa-solid fa-plus text-sky-400 text-md peer-checked:hidden mt-3"
-              ></i>
-              <i
-                class="fa-sharp fa-solid fa-minus text-sky-400 text-md hidden peer-checked:inline-block mt-3"
-              ></i>
-              <p
-                class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
-              >
-                <i
-                  class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
-                ></i
-                >Coordinación de equipo de Sistemas de Información Geográfica.
-                <br /><i
-                  class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
-                ></i>
-                Responsable de la Infraestructura de Datos Espaciales.
-                <br /><i
-                  class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
-                ></i>
-                Tareas de gestión. Desarrollo frontend de proyectos. <br /><i
-                  class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
-                ></i>
-                Capacitaciones. <br /><i
-                  class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
-                ></i>
-                Soporte espacial a la toma de decisiones.
-              </p>
-              <hr
-                class="w-4/5 mx-auto border-dotted border-sky-400 px-4 mt-5 hidden peer-checked:block"
-              />
-            </li>
-            <!-- ==================================================OTRO ITEM================================================== -->
-            <li class="mb-10 ml-6 relative">
-              <input
-                type="checkbox"
-                class="peer ver-mas absolute cursor-pointer inset-x-0 w-full h-full h-12 opacity-0"
-              />
-              <span
-                class="absolute flex items-center justify-center w-6 h-6 bg-gray-600 rounded-full -left-9 top-1 ring-8 ring-gray-900 mt-2"
-              >
-                <i
-                  class="fa-sharp fa-solid fa-briefcase text-sky-400 text-sm"
-                ></i>
-              </span>
-              <div class="px-4">
-                <time class="block text-left text-sm font-normal text-gray-400"
-                  >Diciembre 2022 - Actualidad</time
-                >
-                <h3
-                  class="flex items-center text-lg font-semibold text-gray-500 text-white"
-                >
-                  UNCPBA - SpaceSur - Municipio de Quilmes
-                </h3>
-                <p class="font-extralight text-left">
-                  Integrante de proyecto - Equipo técnico
-                </p>
-              </div>
-              <i
-                class="fa-sharp fa-solid fa-plus text-sky-400 text-md peer-checked:hidden mt-3"
-              ></i>
-              <i
-                class="fa-sharp fa-solid fa-minus text-sky-400 text-md hidden peer-checked:inline-block mt-3"
-              ></i>
-              <p
-                class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
-              >
-                Desafío
-                <span class="font-semibold">IMPACTAR Nº 154</span> "Mejorar y
-                ampliar la Información Territorial del Municipio de Quilmes para
-                la optimización de la gestión comunal de los inmuebles y del
-                arbolado público"
-              </p>
-              <p
-                class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
-              >
-                <i
-                  class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
-                ></i
-                >Identificación de requerimientos de usuarios y del sistema para
-                implementación de soluciones. <br />
-                <i
-                  class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
-                ></i
-                >Integrante de equipo multidisciplinar en la elaboración de
-                soluciones satelitales para Catastro e identificación y
-                caracterización del arbolado urbano. <br />
-                <i
-                  class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
-                ></i
-                >Modelado de datos catastrales para la optimización del registro
-                y cartografía.
-              </p>
-              <hr
-                class="w-4/5 mx-auto border-dotted border-sky-400 px-4 mt-5 hidden peer-checked:block"
-              />
-            </li>
-            <!-- ==================================================OTRO ITEM================================================== -->
-            <li class="mb-10 ml-6 relative">
-              <input
-                type="checkbox"
-                class="peer ver-mas absolute cursor-pointer inset-x-0 w-full h-full h-12 opacity-0"
-              />
-              <span
-                class="absolute flex items-center justify-center w-6 h-6 bg-gray-600 rounded-full -left-9 top-1 ring-8 ring-gray-900 mt-2"
-              >
-                <i
-                  class="fa-sharp fa-solid fa-briefcase text-sky-400 text-sm"
-                ></i>
-              </span>
-              <div class="px-4">
-                <time class="block text-left text-sm font-normal text-gray-400"
-                  >Agosto 2022 - Actualidad
-                </time>
-                <h3
-                  class="flex items-center text-left text-lg font-semibold text-gray-500 text-white"
-                >
-                  Universidad Nacional del Centro de la Provincia de Buenos
-                  Aires
-                </h3>
-                <p class="font-extralight text-left">Ayudante de Primera</p>
-              </div>
-              <i
-                class="fa-sharp fa-solid fa-plus text-sky-400 text-md peer-checked:hidden mt-3"
-              ></i>
-              <i
-                class="fa-sharp fa-solid fa-minus text-sky-400 text-md hidden peer-checked:inline-block mt-3"
-              ></i>
-              <p
-                class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
-              >
-                <i
-                  class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
-                ></i
-                >Tutor del Seminario de Práctica Profesional, asignatura final
-                de la Tecnicatura en Sistemas de Información Geográfica.
-              </p>
-              <p
-                class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
-              >
-                En esta instancia, se acompaña a alumnos durante una experiencia
-                profesional al interior de una organización que busca obtener
-                Información Geoespacial en un proyecto concreto.
-              </p>
-              <hr
-                class="w-4/5 mx-auto border-dotted border-sky-400 px-4 mt-5 hidden peer-checked:block"
-              />
-            </li>
-            <!-- ==================================================OTRO ITEM================================================== -->
-            <li class="mb-10 ml-6 relative">
-              <input
-                type="checkbox"
-                class="peer ver-mas absolute cursor-pointer inset-x-0 w-full h-full h-12 opacity-0"
-              />
-              <span
-                class="absolute flex items-center justify-center w-6 h-6 bg-gray-600 rounded-full -left-9 top-1 ring-8 ring-gray-900 mt-2"
-              >
-                <i
-                  class="fa-sharp fa-solid fa-briefcase text-sky-400 text-sm"
-                ></i>
-              </span>
-              <div class="px-4">
-                <time class="block text-left text-sm font-normal text-gray-400"
-                  >Marzo 2022 - Actualidad
-                </time>
-                <h3
-                  class="flex items-center text-left text-lg font-semibold text-gray-500 text-white"
-                >
-                  UNCPBA - SpaceSur - BID
-                </h3>
-                <p class="font-extralight text-left">
-                  Integrante de proyecto - Equipo técnico
-                </p>
-              </div>
-              <i
-                class="fa-sharp fa-solid fa-plus text-sky-400 text-md peer-checked:hidden mt-3"
-              ></i>
-              <i
-                class="fa-sharp fa-solid fa-minus text-sky-400 text-md hidden peer-checked:inline-block mt-3"
-              ></i>
-              <p
-                class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
-              >
-                ANR asociativo
-                <span class="font-semibold"
-                  >"Tecnología Geoespacial de Desarrollo Nacional para Gobierno
-                  e Industria 4.0"</span
-                >
-              </p>
-              <p
-                class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
-              >
-                <i
-                  class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
-                ></i
-                >Identificación de requerimientos de usuarios y del sistema para
-                implementación de soluciones. <br />
-                <i
-                  class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
-                ></i
-                >Integrante de equipo multidisciplinar en la elaboración de
-                soluciones satelitales para Catastro e identificación y
-                caracterización del arbolado urbano.
-              </p>
-              <hr
-                class="w-4/5 mx-auto border-dotted border-sky-400 px-4 mt-5 hidden peer-checked:block"
-              />
-            </li>
-            <!-- ==================================================OTRO ITEM================================================== -->
-            <li class="mb-10 ml-6 relative">
-              <input
-                type="checkbox"
-                class="peer ver-mas absolute cursor-pointer inset-x-0 w-full h-full h-12 opacity-0"
-              />
-              <span
-                class="absolute flex items-center justify-center w-6 h-6 bg-gray-600 rounded-full -left-9 top-1 ring-8 ring-gray-900 mt-2"
-              >
-                <i
-                  class="fa-sharp fa-solid fa-briefcase text-sky-400 text-sm"
-                ></i>
-              </span>
-              <div class="px-4">
-                <time class="block text-left text-sm font-normal text-gray-400"
-                  >Marzo 2022 - Mayo 2023
-                </time>
-                <h3
-                  class="flex items-center text-left text-lg font-semibold text-gray-500 text-white"
-                >
-                  UNCPBA - SpaceSur - CONAE
-                </h3>
-                <p class="font-extralight text-left">
-                  Integrante de proyecto - Equipo técnico
-                </p>
-              </div>
-              <i
-                class="fa-sharp fa-solid fa-plus text-sky-400 text-md peer-checked:hidden mt-3"
-              ></i>
-              <i
-                class="fa-sharp fa-solid fa-minus text-sky-400 text-md hidden peer-checked:inline-block mt-3"
-              ></i>
-              <p
-                class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
-              >
-                Programa PROSAT II
-                <span class="font-semibold"
-                  >"Desarrollo e implementación de un sistema integral de
-                  información satelital para la gestión y la planificación
-                  urbana en gobiernos locales."</span
-                >
-              </p>
-              <p
-                class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
-              >
-                <i
-                  class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
-                ></i
-                >Identificación de requerimientos de usuarios y del sistema.
-                <br /><i
-                  class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
-                ></i>
-                Determinación de las variables y fuentes de datos para la
-                elaboración de productos.<br /><i
-                  class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
-                ></i>
-                Elaboración de algoritmos.<br /><i
-                  class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
-                ></i>
-                Implementación y verificación del cumplimiento de los
-                requerimientos y testing del sistema. Puesta en marcha del
-                sistema.<br /><i
-                  class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
-                ></i>
-                Elaboración del documento del plan de mantenimiento y manual de
-                usuario.<br /><i
-                  class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
-                ></i>
-                Implementación de capacitación en el uso del sistema.
-              </p>
-              <hr
-                class="w-4/5 mx-auto border-dotted border-sky-400 px-4 mt-5 hidden peer-checked:block"
-              />
-            </li>
-            <!-- ==================================================OTRO ITEM================================================== -->
-            <li class="mb-10 ml-6 relative">
-              <input
-                type="checkbox"
-                class="peer ver-mas absolute cursor-pointer inset-x-0 w-full h-full h-12 opacity-0"
-              />
-              <span
-                class="absolute flex items-center justify-center w-6 h-6 bg-gray-600 rounded-full -left-9 top-1 ring-8 ring-gray-900 mt-2"
-              >
-                <i
-                  class="fa-sharp fa-solid fa-briefcase text-sky-400 text-sm"
-                ></i>
-              </span>
-              <div class="px-4">
-                <time class="block text-left text-sm font-normal text-gray-400"
-                  >Octubre 2020 - Marzo 2023
-                </time>
-                <h3
-                  class="flex items-center text-left text-lg font-semibold text-gray-500 text-white"
-                >
-                  UNCPBA - SpaceSur - CEPES
-                </h3>
-                <p class="font-extralight text-left">
-                  Creación de contenido y tutor de formación
-                </p>
-              </div>
-              <i
-                class="fa-sharp fa-solid fa-plus text-sky-400 text-md peer-checked:hidden mt-3"
-              ></i>
-              <i
-                class="fa-sharp fa-solid fa-minus text-sky-400 text-md hidden peer-checked:inline-block mt-3"
-              ></i>
-              <p
-                class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
-              >
-                <span class="font-semibold"
-                  >"Programa de Municipios Inteligentes. Herramientas
-                  Geoespaciales al servicio de la construcción de Gobierno 4.0",
-                </span>
-                con apoyo del Ministerio de Desarrollo Productivo de la Nación.
-              </p>
-              <p
-                class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
-              >
-                <i
-                  class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
-                ></i
-                >Coordinación de actividades con participantes (5 municipios).
-                <br /><i
-                  class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
-                ></i>
-                Creación y revisión de contenidos de la capacitación en Sistemas
-                de Información Geográfica y Teledetección.<br /><i
-                  class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
-                ></i>
-                Evaluación de actividades.<br /><i
-                  class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
-                ></i>
-                Tutoría en proyectos reales para aplicación de capacidades
-                transferidas.
-              </p>
-              <hr
-                class="w-4/5 mx-auto border-dotted border-sky-400 px-4 mt-5 hidden peer-checked:block"
-              />
-            </li>
-            <!-- ==================================================OTRO ITEM================================================== -->
-            <li class="mb-10 ml-6 relative">
-              <input
-                type="checkbox"
-                class="peer ver-mas absolute cursor-pointer inset-x-0 w-full h-full h-12 opacity-0"
-              />
-              <span
-                class="absolute flex items-center justify-center w-6 h-6 bg-gray-600 rounded-full -left-9 top-1 ring-8 ring-gray-900 mt-2"
-              >
-                <i
-                  class="fa-sharp fa-solid fa-briefcase text-sky-400 text-sm"
-                ></i>
-              </span>
-              <div class="px-4">
-                <time class="block text-left text-sm font-normal text-gray-400"
-                  >Septiembre 2021 - Septiembre 2022
-                </time>
-                <h3
-                  class="flex items-center text-left text-lg font-semibold text-gray-500 text-white"
-                >
-                  THE BLACK PUMA Ai
-                </h3>
-                <p class="font-extralight text-left">
-                  Analista Funcional GIS | QA
-                </p>
-              </div>
-              <i
-                class="fa-sharp fa-solid fa-plus text-sky-400 text-md peer-checked:hidden mt-3"
-              ></i>
-              <i
-                class="fa-sharp fa-solid fa-minus text-sky-400 text-md hidden peer-checked:inline-block mt-3"
-              ></i>
-              <p
-                class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
-              >
-                <i
-                  class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
-                ></i
-                >Soporte en análisis de datos espaciales y desarrollo de
-                procesos GIS en librerías geoespaciales de Python.
-              </p>
-              <p
-                class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
-              >
-                Se construyó la solución que se encuentra implementada
-                actualmente en el proyecto
-                <span class="font-semibold">Ciudad3D</span> de Ciudad de Buenos
-                Aires para el cálculo automatizado de volumetrías a partir del
-                Código Urbanístico.
-              </p>
-              <hr
-                class="w-4/5 mx-auto border-dotted border-sky-400 px-4 mt-5 hidden peer-checked:block"
-              />
-            </li>
-            <!-- ==================================================OTRO ITEM================================================== -->
-            <li class="mb-10 ml-6 relative">
-              <input
-                type="checkbox"
-                class="peer ver-mas absolute cursor-pointer inset-x-0 w-full h-full h-12 opacity-0"
-              />
-              <span
-                class="absolute flex items-center justify-center w-6 h-6 bg-gray-600 rounded-full -left-9 top-1 ring-8 ring-gray-900 mt-2"
-              >
-                <i
-                  class="fa-sharp fa-solid fa-briefcase text-sky-400 text-sm"
-                ></i>
-              </span>
-              <div class="px-4">
-                <time class="block text-left text-sm font-normal text-gray-400"
-                  >Septiembre 2021 - Septiembre 2022
-                </time>
-                <h3
-                  class="flex items-center text-left text-lg font-semibold text-gray-500 text-white"
-                >
-                  UNCPBA - SpaceSur - World Food Programme | United Nations
-                </h3>
-                <p class="font-extralight text-left">
-                  Tutor de formación | Co-coordinador del programa
-                </p>
-              </div>
-              <i
-                class="fa-sharp fa-solid fa-plus text-sky-400 text-md peer-checked:hidden mt-3"
-              ></i>
-              <i
-                class="fa-sharp fa-solid fa-minus text-sky-400 text-md hidden peer-checked:inline-block mt-3"
-              ></i>
-              <p
-                class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
-              >
-                <i
-                  class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
-                ></i
-                >Programa de formación y consultoría en Sistemas de Información
-                Geográfica, Sensores remotos y cartografía para gestión de
-                emergencias en plataforma webGIS basada en Geonode 4.0. <br /><i
-                  class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
-                ></i
-                >Basado en ArcGIS Pro y QGIS<br /><i
-                  class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
-                ></i
-                >Consultoría para aplicación de capacidades transferidas basada
-                en una emergencia real por paso de huracán en Centroamérica.
-              </p>
-              <hr
-                class="w-4/5 mx-auto border-dotted border-sky-400 px-4 mt-5 hidden peer-checked:block"
-              />
-            </li>
-            <!-- ==================================================OTRO ITEM================================================== -->
-            <!-- ==================================================OTRO ITEM================================================== -->
-            <!-- ==================================================OTRO ITEM================================================== -->
-          </ol>
-        </div>
-        <div class="flex flex-col w-2/6 mx-auto">
-          <div class="h-1/2">
-            <h5 class="text-2xl mb-5">Links de interés</h5>
-            <div class="flex justify-around">
-              <a href="http://mapa.tandil.gov.ar/IdeTandil/" target="_blank">
-                <figure>
-                  <img
-                    src="img/ide-tandil.png"
-                    alt=""
-                    class="border-2 border-gray-400 rounded-lg h-20 w-[200px] object-cover hover:border-gray-300"
-                  />
-                  <figcaption>IDE Tandil</figcaption>
-                </figure>
-              </a>
-              <a href="https://ciudad3d.buenosaires.gob.ar/" target="_blank">
-                <figure>
-                  <img
-                    src="img/c3d.png"
-                    alt=""
-                    class="border-2 border-gray-400 rounded-lg h-20 w-[200px] object-cover hover:border-gray-300"
-                  />
-                  <figcaption>Ciudad 3D</figcaption>
-                </figure>
-              </a>
+        <div class="text-slate-50 text-center flex justify-center p-20">
+          <div class="w-4/5 text-left">
+            <h3 class="text-3xl mb-3">Soy Mauro, analista de datos espaciales</h3>
+            <hr class="w-3/5 my-4 border-gray-600" />
+            <p class="text-lg pr-10">
+              Tengo experiencia en las tareas requeridas durante el
+              <span data-tooltip-target="tooltip-default">ciclo de vida </span>
+              completo del dato geográfico, con especial acento en la
+              implementación y mantenimiento del stack necesario para consolidar
+              Infraestructuras de Datos Espaciales (IDE).
+            </p>
+            <br />
+            <p class="text-lg pr-10">
+              Me defino como una persona con un perfil altamente proactivo y
+              siempre dispuesto a nuevos desafíos que expandan mi horizonte
+              personal y profesional. Poseo conocimientos en bases de datos,
+              servidores de mapas web, desarrollo frontend, procesamiento de datos
+              para la obtención de información y comunicación de la Información
+              Geográfica.
+            </p>
+            <div
+              id="tooltip-default"
+              role="tooltip"
+              class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-gray-900 transition-opacity duration-300 bg-sky-400 rounded-lg shadow-sm opacity-0 tooltip dark:bg-sky-400"
+            >
+              Captura, almacenamiento, procesamiento y reutilización
+              <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
           </div>
-          <div class="h-1/2 my-auto">
-            <div class="text-center">
-              <h4 class="text-3xl">
-                ¿Te gustaría conocer más sobre mi trayectoria profesional?
-              </h4>
+          <div class="w-1/5">
+            <div class="text-left">
+              <span>Nombre: </span
+              ><span class="font-extralight">Mauro Ortmann</span>
+              <hr class="my-3 border-gray-600" />
+              <span>Email:</span>
+              <span class="font-extralight">
+                <a class="text-sky-400" href="mailto:mauro.ortmann@gmail.com"
+                  >mauro.ortmann@gmail.com</a
+                >
+              </span>
+              <hr class="my-3 border-gray-600" />
+              <span>Edad: </span><span class="font-extralight">33 años</span>
             </div>
             <a href="src/CV Mauro ortmann Jul2023.pdf" target="_blank">
               <button
@@ -1117,74 +265,938 @@
             </a>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- CONTACTO -->
-    <section
-      id="contact"
-      class="bg-gray-700 p-4 lg:ml-64 flex flex-col justify-between h-[94vh]"
-    >
-      <div class="flex text-center my-5 relative">
-        <h2
-          class="text-9xl font-bold text-gray-900 opacity-50 text-uppercase w-full tracking-wider"
-        >
-          Contacto
-        </h2>
-        <p
-          class="text-5xl text-slate-50 absolute mx-auto self-center inset-x-0 top-8 z-1"
-        >
-          Contacto<span
-            class="border-sky-600 border-2 block w-1/12 mx-auto my-2"
-          ></span>
-        </p>
-      </div>
-      <div class="text-slate-50 flex justify-center my-auto px-10">
-        <div class="w-fit h-fit self-center p-5">
-          <h4 class="text-2xl mb-10">
-            Visitá mi perfil en LinkedIn o escribime un correo
-          </h4>
-          <div class="p-10">
-            <a
-              href="https://www.linkedin.com/in/mauro-ortmann/"
-              target="_blank"
-            >
-              <div class="flex items-center hover:opacity-75">
-                <div
-                  class="w-16 h-16 bg-sky-600 rounded-full flex justify-center mr-5"
-                >
-                  <i
-                    class="fa-brands fa-linkedin text-slate-50 text-4xl self-center"
-                  ></i>
-                </div>
-                <span class="font-light text-xl"
-                  >linkedin.com/in/mauro-ortmann/</span
-                >
-              </div>
-            </a>
-            <hr class="border-sky-600 my-8" />
-            <a
-              href="https://www.linkedin.com/in/mauro-ortmann/"
-              target="_blank"
-            >
-              <div class="flex items-center hover:opacity-75">
-                <div
-                  class="w-16 h-16 bg-sky-600 rounded-full flex justify-center mr-5"
-                >
-                  <i
-                    class="fa-solid fa-envelope text-slate-50 text-4xl self-center"
-                  ></i>
-                </div>
-                <span class="font-light text-xl">mauro.ortmann@gmail.com</span>
-              </div>
-            </a>
+        <div class="w-4/5 flex justify-between mx-auto mb-20 text-sky-400">
+          <div class="text-center">
+            <h4 class="text-5xl font-bold mb-5">
+              <span class="counter" data-from="0" data-to="8">8</span>+
+            </h4>
+            <p class="text-xl text-slate-50">Años de experiencia</p>
+          </div>
+          <span class="border border-gray-600"></span>
+          <div class="text-center">
+            <h4 class="text-5xl font-bold mb-5">
+              <span class="counter" data-from="0" data-to="10">10</span>+
+            </h4>
+            <p class="text-xl text-slate-50">Años de experiencia</p>
+          </div>
+          <span class="border border-gray-600"></span>
+          <div class="text-center">
+            <h4 class="text-5xl font-bold mb-5">
+              <span class="counter" data-from="0" data-to="10">10</span>+
+            </h4>
+            <p class="text-xl text-slate-50">Años de experiencia</p>
+          </div>
+          <span class="border border-gray-600"></span>
+          <div class="text-center">
+            <h4 class="text-5xl font-bold mb-5">
+              <span class="counter" data-from="0" data-to="10">10</span>+
+            </h4>
+            <p class="text-xl text-slate-50">Años de experiencia</p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <!-- PERFIL PROFESIONAL -->
+      <section
+        id="profile"
+        class="bg-gray-700 p-4 lg:ml-64 flex flex-col justify-between min-h-screen"
+      >
+        <div class="flex text-center my-5 relative">
+          <h2
+            class="text-9xl font-bold text-gray-900 opacity-50 text-uppercase w-full tracking-wider"
+          >
+            PERFIL
+          </h2>
+          <p
+            class="text-5xl text-slate-50 absolute mx-auto self-center inset-x-0 top-8 z-1"
+          >
+            Perfil profesional<span
+              class="border-sky-600 border-2 block w-1/12 mx-auto my-2"
+            ></span>
+          </p>
+        </div>
+        <div class="text-slate-50 flex flex-col justify-between px-10">
+          <div class="my-6">
+            <h3 class="font-medium">FORMACIÓN</h3>
+            <hr class="my-3 border-gray-600" />
+            <ul>
+              <li class="font-light">
+                <i class="fa-sharp fa-solid fa-angles-right text-sky-400 mr-2"></i
+                ><span class="font-normal"
+                  >Técnico en Sistemas de Información Geográfica.</span
+                >
+                <p class="font-extralight pl-6">
+                  Facultad de Ciencias Humanas de la Universidad Nacional del
+                  Centro de la Provincia de Buenos Aires. Tandil 2016.
+                </p>
+              </li>
+              <li class="font-light mt-2">
+                <i class="fa-sharp fa-solid fa-angles-right text-sky-400 mr-2"></i
+                ><span class="font-normal"
+                  >Diplomado en Modelos Digitales de Elevaciones (MDE) para el
+                  análisis morfológico del terreno y Sistemas de Información
+                  Geográfica (SIG).</span
+                >
+                <p class="font-extralight pl-6">
+                  Facultad de Filosofía y Letras - Universidad de Filosofía y
+                  Letras. Colegio Sholem. Buenos Aires 2019
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="my-6">
+            <h3 class="font-medium">HABILIDADES</h3>
+            <hr class="my-3 border-gray-600" />
+            <ul class="font-extralight grid grid-cols-3">
+              <li>
+                <i
+                  class="fa-sharp fa-solid fa-circle-check text-sky-400 text-sm mr-2"
+                ></i
+                ><span class="align-middle">Gestión de proyectos</span>
+              </li>
+              <li>
+                <i
+                  class="fa-sharp fa-solid fa-circle-check text-sky-400 text-sm mr-2"
+                ></i
+                ><span class="align-middle">Resolución de problemas</span>
+              </li>
+              <li>
+                <i
+                  class="fa-sharp fa-solid fa-circle-check text-sky-400 text-sm mr-2"
+                ></i
+                ><span class="align-middle">Pensamiento analítico</span>
+              </li>
+              <li>
+                <i
+                  class="fa-sharp fa-solid fa-circle-check text-sky-400 text-sm mr-2"
+                ></i
+                ><span class="align-middle">Análisis espacial de soluciones</span>
+              </li>
+              <li>
+                <i
+                  class="fa-sharp fa-solid fa-circle-check text-sky-400 text-sm mr-2"
+                ></i
+                ><span class="align-middle">Comunicación de resultados</span>
+              </li>
+              <li>
+                <i
+                  class="fa-sharp fa-solid fa-circle-check text-sky-400 text-sm mr-2"
+                ></i
+                ><span class="align-middle"
+                  >Capacidad de trabajo en equipos multidisciplinares</span
+                >
+              </li>
+              <li>
+                <i
+                  class="fa-sharp fa-solid fa-circle-check text-sky-400 text-sm mr-2"
+                ></i
+                ><span class="align-middle">Actualización constante</span>
+              </li>
+            </ul>
+          </div>
+          <div class="my-6">
+            <h3 class="font-medium">TECNOLOGÍAS</h3>
+            <hr class="my-3 border-gray-600" />
+            <ul class="flex justify-between">
+              <li class="font-normal">
+                Sistemas de Información Geográfica
+                <ul class="font-extralight">
+                  <li>QGIS</li>
+                  <li>ArcMap</li>
+                  <li>ArcGIS Pro</li>
+                  <li>Global Mapper</li>
+                </ul>
+              </li>
+              <li class="font-normal">
+                WebGIS | Visualización
+                <ul class="font-extralight">
+                  <li>ArcGIS Online</li>
+                  <li>GeoNode 4.0</li>
+                  <li>ArgenMap</li>
+                  <li>Geoserver</li>
+                  <li>Geonetwork</li>
+                </ul>
+              </li>
+              <li class="font-normal">
+                Bases de Datos
+                <ul class="font-extralight">
+                  <li>PostgreSQL</li>
+                  <li>PostGIS</li>
+                  <li>PgAdmin</li>
+                  <li>MySQL</li>
+                  <li>Workbench</li>
+                </ul>
+              </li>
+              <li class="font-normal">
+                Lenguajes informáticos
+                <ul class="font-extralight">
+                  <li>HTML</li>
+                  <li class="relative">
+                    CSS
+                    <input
+                      type="checkbox"
+                      class="absolute top-1 inset-x-0 h-4 w-full opacity-0 z-10 cursor-pointer peer"
+                    />
+                    <i
+                      class="fa-sharp fa-solid fa-circle-plus ml-1 text-sky-400 text-sm align-top pt-[1px] peer-checked:hidden"
+                    ></i>
+                    <i
+                      class="fa-sharp fa-solid fa-circle-minus ml-1 text-sky-400 text-sm align-top pt-[2px] hidden peer-checked:inline-block"
+                    ></i>
+                    <ul class="pl-5 hidden peer-checked:block">
+                      <li>Tailwind</li>
+                      <li>Bootstrap</li>
+                    </ul>
+                  </li>
+                  <li class="relative">
+                    JavaScript
+                    <input
+                      type="checkbox"
+                      class="absolute top-1 inset-x-0 h-4 w-full opacity-0 z-10 cursor-pointer peer"
+                    />
+                    <i
+                      class="fa-sharp fa-solid fa-circle-plus ml-1 text-sky-400 text-sm align-top pt-[1px] peer-checked:hidden"
+                    ></i>
+                    <i
+                      class="fa-sharp fa-solid fa-circle-minus ml-1 text-sky-400 text-sm align-top pt-[1px] hidden peer-checked:inline-block"
+                    ></i>
+                    <ul class="pl-5 hidden peer-checked:block">
+                      <li>Leaflet</li>
+                    </ul>
+                  </li>
+                  <li class="relative">
+                    Python
+                    <input
+                      type="checkbox"
+                      class="absolute top-1 inset-x-0 h-4 w-full opacity-0 z-10 cursor-pointer peer"
+                    />
+                    <i
+                      class="fa-sharp fa-solid fa-circle-plus ml-1 text-sky-400 text-sm align-top pt-[1px] peer-checked:hidden"
+                    ></i>
+                    <i
+                      class="fa-sharp fa-solid fa-circle-minus ml-1 text-sky-400 text-sm align-top pt-[1px] hidden peer-checked:inline-block"
+                    ></i>
+                    <ul class="pl-5 hidden peer-checked:block">
+                      <li>Jupyter Notebooks</li>
+                      <li>Geopandas</li>
+                      <li>NumPy</li>
+                      <li>Plotly</li>
+                      <li>Folium</li>
+                    </ul>
+                  </li>
+                  <li class="relative">
+                    R
+                    <input
+                      type="checkbox"
+                      class="absolute top-1 inset-x-0 h-4 w-full opacity-0 z-10 cursor-pointer peer"
+                    />
+                    <i
+                      class="fa-sharp fa-solid fa-circle-plus ml-1 text-sky-400 text-sm align-top pt-[1px] peer-checked:hidden"
+                    ></i>
+                    <i
+                      class="fa-sharp fa-solid fa-circle-minus ml-1 text-sky-400 text-sm align-top pt-[1px] hidden peer-checked:inline-block"
+                    ></i>
+                    <ul class="pl-5 hidden peer-checked:block">
+                      <li>RMarkdown</li>
+                      <li>Flexdashboard</li>
+                      <li>dplyr</li>
+                      <li>sf</li>
+                      <li>DT</li>
+                    </ul>
+                  </li>
+                  <li>SQL</li>
+                </ul>
+              </li>
+              <li class="font-normal">
+                Bussiness Intelligence
+                <ul class="font-extralight">
+                  <li>Metabase</li>
+                  <li>Microsoft Excel</li>
+                  <li>Power BI</li>
+                  <li>IBM SPSS</li>
+                </ul>
+              </li>
+              <li class="font-normal">
+                Otros
+                <ul class="font-extralight">
+                  <li>Jira | Redmine | Trello | Slack</li>
+                  <li>GitHub</li>
+                  <li>Visual Studio Code | RStudio</li>
+                  <li>XAMPP</li>
+                  <li>AutoCAD Civil 3D</li>
+                  <li>Trimble Business Center</li>
+                  <li>Pix4D</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!--EXPERIENCIA-->
+      <section
+        id="experience"
+        class="bg-gray-800 h-screen p-4 lg:ml-64 flex flex-col justify-between"
+      >
+        <div class="flex text-center mt-5 mb-10 relative">
+          <h2
+            class="text-9xl font-bold text-gray-900 opacity-50 text-uppercase w-full tracking-wider"
+          >
+            EXPERIENCIA
+          </h2>
+          <p
+            class="text-5xl text-slate-50 absolute mx-auto self-center inset-x-0 top-8 z-1"
+          >
+            Ejercicio profesional<span
+              class="border-sky-600 border-2 block w-1/12 mx-auto my-2"
+            ></span>
+          </p>
+        </div>
+        <div class="text-slate-50 text-center flex h-full px-10">
+          <div
+            class="bg-gray-700 w-2/5 rounded-lg mr-4 px-5 py-5 overflow-y-auto h-[650px]"
+          >
+            <ol class="border-l border-gray-800 pr-5 ml-5">
+              <li class="mb-10 ml-6 relative">
+                <input
+                  type="checkbox"
+                  class="peer ver-mas absolute cursor-pointer inset-x-0 w-full h-full h-12 opacity-0"
+                />
+                <span
+                  class="absolute flex items-center justify-center w-6 h-6 bg-gray-600 rounded-full -left-9 top-1 ring-8 ring-gray-900 mt-2"
+                >
+                  <i
+                    class="fa-sharp fa-solid fa-briefcase text-sky-400 text-sm"
+                  ></i>
+                </span>
+                <div class="px-4">
+                  <time class="block text-left text-sm font-normal text-gray-400"
+                    >Octubre 2015 - Actualidad</time
+                  >
+                  <h3
+                    class="flex items-center text-lg font-semibold text-gray-500 text-white"
+                  >
+                    Profesional independiente
+                  </h3>
+                  <p class="font-extralight text-left">
+                    Analista en Sistemas de Información Geográfica
+                  </p>
+                </div>
+                <i
+                  class="fa-sharp fa-solid fa-plus text-sky-400 text-md peer-checked:hidden mt-3"
+                ></i>
+                <i
+                  class="fa-sharp fa-solid fa-minus text-sky-400 text-md hidden peer-checked:inline-block mt-3"
+                ></i>
+                <p
+                  class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
+                >
+                  <i
+                    class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
+                  ></i
+                  >Relevamiento, procesamiento y generación de información a
+                  demanda a partir de datos geoespaciales para diversas
+                  industrias.
+                </p>
+                <hr
+                  class="w-4/5 mx-auto border-dotted border-sky-400 px-4 mt-5 hidden peer-checked:block"
+                />
+              </li>
+              <!-- ==================================================OTRO ITEM================================================== -->
+              <li class="mb-10 ml-6 relative">
+                <input
+                  type="checkbox"
+                  class="peer ver-mas absolute cursor-pointer inset-x-0 w-full h-full h-12 opacity-0"
+                />
+                <span
+                  class="absolute flex items-center justify-center w-6 h-6 bg-gray-600 rounded-full -left-9 top-1 ring-8 ring-gray-900 mt-2"
+                >
+                  <i
+                    class="fa-sharp fa-solid fa-briefcase text-sky-400 text-sm"
+                  ></i>
+                </span>
+                <div class="px-4">
+                  <time class="block text-left text-sm font-normal text-gray-400"
+                    >Enero 2021 - Actualidad</time
+                  >
+                  <h3
+                    class="flex items-center text-lg font-semibold text-gray-500 text-white"
+                  >
+                    Municipio de Tandil
+                  </h3>
+                  <p class="font-extralight text-left">
+                    Coordinador - Área de Geotecnologías
+                  </p>
+                </div>
+                <i
+                  class="fa-sharp fa-solid fa-plus text-sky-400 text-md peer-checked:hidden mt-3"
+                ></i>
+                <i
+                  class="fa-sharp fa-solid fa-minus text-sky-400 text-md hidden peer-checked:inline-block mt-3"
+                ></i>
+                <p
+                  class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
+                >
+                  <i
+                    class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
+                  ></i
+                  >Coordinación de equipo de Sistemas de Información Geográfica.
+                  <br /><i
+                    class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
+                  ></i>
+                  Responsable de la Infraestructura de Datos Espaciales.
+                  <br /><i
+                    class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
+                  ></i>
+                  Tareas de gestión. Desarrollo frontend de proyectos. <br /><i
+                    class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
+                  ></i>
+                  Capacitaciones. <br /><i
+                    class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
+                  ></i>
+                  Soporte espacial a la toma de decisiones.
+                </p>
+                <hr
+                  class="w-4/5 mx-auto border-dotted border-sky-400 px-4 mt-5 hidden peer-checked:block"
+                />
+              </li>
+              <!-- ==================================================OTRO ITEM================================================== -->
+              <li class="mb-10 ml-6 relative">
+                <input
+                  type="checkbox"
+                  class="peer ver-mas absolute cursor-pointer inset-x-0 w-full h-full h-12 opacity-0"
+                />
+                <span
+                  class="absolute flex items-center justify-center w-6 h-6 bg-gray-600 rounded-full -left-9 top-1 ring-8 ring-gray-900 mt-2"
+                >
+                  <i
+                    class="fa-sharp fa-solid fa-briefcase text-sky-400 text-sm"
+                  ></i>
+                </span>
+                <div class="px-4">
+                  <time class="block text-left text-sm font-normal text-gray-400"
+                    >Diciembre 2022 - Actualidad</time
+                  >
+                  <h3
+                    class="flex items-center text-lg font-semibold text-gray-500 text-white"
+                  >
+                    UNCPBA - SpaceSur - Municipio de Quilmes
+                  </h3>
+                  <p class="font-extralight text-left">
+                    Integrante de proyecto - Equipo técnico
+                  </p>
+                </div>
+                <i
+                  class="fa-sharp fa-solid fa-plus text-sky-400 text-md peer-checked:hidden mt-3"
+                ></i>
+                <i
+                  class="fa-sharp fa-solid fa-minus text-sky-400 text-md hidden peer-checked:inline-block mt-3"
+                ></i>
+                <p
+                  class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
+                >
+                  Desafío
+                  <span class="font-semibold">IMPACTAR Nº 154</span> "Mejorar y
+                  ampliar la Información Territorial del Municipio de Quilmes para
+                  la optimización de la gestión comunal de los inmuebles y del
+                  arbolado público"
+                </p>
+                <p
+                  class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
+                >
+                  <i
+                    class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
+                  ></i
+                  >Identificación de requerimientos de usuarios y del sistema para
+                  implementación de soluciones. <br />
+                  <i
+                    class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
+                  ></i
+                  >Integrante de equipo multidisciplinar en la elaboración de
+                  soluciones satelitales para Catastro e identificación y
+                  caracterización del arbolado urbano. <br />
+                  <i
+                    class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
+                  ></i
+                  >Modelado de datos catastrales para la optimización del registro
+                  y cartografía.
+                </p>
+                <hr
+                  class="w-4/5 mx-auto border-dotted border-sky-400 px-4 mt-5 hidden peer-checked:block"
+                />
+              </li>
+              <!-- ==================================================OTRO ITEM================================================== -->
+              <li class="mb-10 ml-6 relative">
+                <input
+                  type="checkbox"
+                  class="peer ver-mas absolute cursor-pointer inset-x-0 w-full h-full h-12 opacity-0"
+                />
+                <span
+                  class="absolute flex items-center justify-center w-6 h-6 bg-gray-600 rounded-full -left-9 top-1 ring-8 ring-gray-900 mt-2"
+                >
+                  <i
+                    class="fa-sharp fa-solid fa-briefcase text-sky-400 text-sm"
+                  ></i>
+                </span>
+                <div class="px-4">
+                  <time class="block text-left text-sm font-normal text-gray-400"
+                    >Agosto 2022 - Actualidad
+                  </time>
+                  <h3
+                    class="flex items-center text-left text-lg font-semibold text-gray-500 text-white"
+                  >
+                    Universidad Nacional del Centro de la Provincia de Buenos
+                    Aires
+                  </h3>
+                  <p class="font-extralight text-left">Ayudante de Primera</p>
+                </div>
+                <i
+                  class="fa-sharp fa-solid fa-plus text-sky-400 text-md peer-checked:hidden mt-3"
+                ></i>
+                <i
+                  class="fa-sharp fa-solid fa-minus text-sky-400 text-md hidden peer-checked:inline-block mt-3"
+                ></i>
+                <p
+                  class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
+                >
+                  <i
+                    class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
+                  ></i
+                  >Tutor del Seminario de Práctica Profesional, asignatura final
+                  de la Tecnicatura en Sistemas de Información Geográfica.
+                </p>
+                <p
+                  class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
+                >
+                  En esta instancia, se acompaña a alumnos durante una experiencia
+                  profesional al interior de una organización que busca obtener
+                  Información Geoespacial en un proyecto concreto.
+                </p>
+                <hr
+                  class="w-4/5 mx-auto border-dotted border-sky-400 px-4 mt-5 hidden peer-checked:block"
+                />
+              </li>
+              <!-- ==================================================OTRO ITEM================================================== -->
+              <li class="mb-10 ml-6 relative">
+                <input
+                  type="checkbox"
+                  class="peer ver-mas absolute cursor-pointer inset-x-0 w-full h-full h-12 opacity-0"
+                />
+                <span
+                  class="absolute flex items-center justify-center w-6 h-6 bg-gray-600 rounded-full -left-9 top-1 ring-8 ring-gray-900 mt-2"
+                >
+                  <i
+                    class="fa-sharp fa-solid fa-briefcase text-sky-400 text-sm"
+                  ></i>
+                </span>
+                <div class="px-4">
+                  <time class="block text-left text-sm font-normal text-gray-400"
+                    >Marzo 2022 - Actualidad
+                  </time>
+                  <h3
+                    class="flex items-center text-left text-lg font-semibold text-gray-500 text-white"
+                  >
+                    UNCPBA - SpaceSur - BID
+                  </h3>
+                  <p class="font-extralight text-left">
+                    Integrante de proyecto - Equipo técnico
+                  </p>
+                </div>
+                <i
+                  class="fa-sharp fa-solid fa-plus text-sky-400 text-md peer-checked:hidden mt-3"
+                ></i>
+                <i
+                  class="fa-sharp fa-solid fa-minus text-sky-400 text-md hidden peer-checked:inline-block mt-3"
+                ></i>
+                <p
+                  class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
+                >
+                  ANR asociativo
+                  <span class="font-semibold"
+                    >"Tecnología Geoespacial de Desarrollo Nacional para Gobierno
+                    e Industria 4.0"</span
+                  >
+                </p>
+                <p
+                  class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
+                >
+                  <i
+                    class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
+                  ></i
+                  >Identificación de requerimientos de usuarios y del sistema para
+                  implementación de soluciones. <br />
+                  <i
+                    class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
+                  ></i
+                  >Integrante de equipo multidisciplinar en la elaboración de
+                  soluciones satelitales para Catastro e identificación y
+                  caracterización del arbolado urbano.
+                </p>
+                <hr
+                  class="w-4/5 mx-auto border-dotted border-sky-400 px-4 mt-5 hidden peer-checked:block"
+                />
+              </li>
+              <!-- ==================================================OTRO ITEM================================================== -->
+              <li class="mb-10 ml-6 relative">
+                <input
+                  type="checkbox"
+                  class="peer ver-mas absolute cursor-pointer inset-x-0 w-full h-full h-12 opacity-0"
+                />
+                <span
+                  class="absolute flex items-center justify-center w-6 h-6 bg-gray-600 rounded-full -left-9 top-1 ring-8 ring-gray-900 mt-2"
+                >
+                  <i
+                    class="fa-sharp fa-solid fa-briefcase text-sky-400 text-sm"
+                  ></i>
+                </span>
+                <div class="px-4">
+                  <time class="block text-left text-sm font-normal text-gray-400"
+                    >Marzo 2022 - Mayo 2023
+                  </time>
+                  <h3
+                    class="flex items-center text-left text-lg font-semibold text-gray-500 text-white"
+                  >
+                    UNCPBA - SpaceSur - CONAE
+                  </h3>
+                  <p class="font-extralight text-left">
+                    Integrante de proyecto - Equipo técnico
+                  </p>
+                </div>
+                <i
+                  class="fa-sharp fa-solid fa-plus text-sky-400 text-md peer-checked:hidden mt-3"
+                ></i>
+                <i
+                  class="fa-sharp fa-solid fa-minus text-sky-400 text-md hidden peer-checked:inline-block mt-3"
+                ></i>
+                <p
+                  class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
+                >
+                  Programa PROSAT II
+                  <span class="font-semibold"
+                    >"Desarrollo e implementación de un sistema integral de
+                    información satelital para la gestión y la planificación
+                    urbana en gobiernos locales."</span
+                  >
+                </p>
+                <p
+                  class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
+                >
+                  <i
+                    class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
+                  ></i
+                  >Identificación de requerimientos de usuarios y del sistema.
+                  <br /><i
+                    class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
+                  ></i>
+                  Determinación de las variables y fuentes de datos para la
+                  elaboración de productos.<br /><i
+                    class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
+                  ></i>
+                  Elaboración de algoritmos.<br /><i
+                    class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
+                  ></i>
+                  Implementación y verificación del cumplimiento de los
+                  requerimientos y testing del sistema. Puesta en marcha del
+                  sistema.<br /><i
+                    class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
+                  ></i>
+                  Elaboración del documento del plan de mantenimiento y manual de
+                  usuario.<br /><i
+                    class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
+                  ></i>
+                  Implementación de capacitación en el uso del sistema.
+                </p>
+                <hr
+                  class="w-4/5 mx-auto border-dotted border-sky-400 px-4 mt-5 hidden peer-checked:block"
+                />
+              </li>
+              <!-- ==================================================OTRO ITEM================================================== -->
+              <li class="mb-10 ml-6 relative">
+                <input
+                  type="checkbox"
+                  class="peer ver-mas absolute cursor-pointer inset-x-0 w-full h-full h-12 opacity-0"
+                />
+                <span
+                  class="absolute flex items-center justify-center w-6 h-6 bg-gray-600 rounded-full -left-9 top-1 ring-8 ring-gray-900 mt-2"
+                >
+                  <i
+                    class="fa-sharp fa-solid fa-briefcase text-sky-400 text-sm"
+                  ></i>
+                </span>
+                <div class="px-4">
+                  <time class="block text-left text-sm font-normal text-gray-400"
+                    >Octubre 2020 - Marzo 2023
+                  </time>
+                  <h3
+                    class="flex items-center text-left text-lg font-semibold text-gray-500 text-white"
+                  >
+                    UNCPBA - SpaceSur - CEPES
+                  </h3>
+                  <p class="font-extralight text-left">
+                    Creación de contenido y tutor de formación
+                  </p>
+                </div>
+                <i
+                  class="fa-sharp fa-solid fa-plus text-sky-400 text-md peer-checked:hidden mt-3"
+                ></i>
+                <i
+                  class="fa-sharp fa-solid fa-minus text-sky-400 text-md hidden peer-checked:inline-block mt-3"
+                ></i>
+                <p
+                  class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
+                >
+                  <span class="font-semibold"
+                    >"Programa de Municipios Inteligentes. Herramientas
+                    Geoespaciales al servicio de la construcción de Gobierno 4.0",
+                  </span>
+                  con apoyo del Ministerio de Desarrollo Productivo de la Nación.
+                </p>
+                <p
+                  class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
+                >
+                  <i
+                    class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
+                  ></i
+                  >Coordinación de actividades con participantes (5 municipios).
+                  <br /><i
+                    class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
+                  ></i>
+                  Creación y revisión de contenidos de la capacitación en Sistemas
+                  de Información Geográfica y Teledetección.<br /><i
+                    class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
+                  ></i>
+                  Evaluación de actividades.<br /><i
+                    class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
+                  ></i>
+                  Tutoría en proyectos reales para aplicación de capacidades
+                  transferidas.
+                </p>
+                <hr
+                  class="w-4/5 mx-auto border-dotted border-sky-400 px-4 mt-5 hidden peer-checked:block"
+                />
+              </li>
+              <!-- ==================================================OTRO ITEM================================================== -->
+              <li class="mb-10 ml-6 relative">
+                <input
+                  type="checkbox"
+                  class="peer ver-mas absolute cursor-pointer inset-x-0 w-full h-full h-12 opacity-0"
+                />
+                <span
+                  class="absolute flex items-center justify-center w-6 h-6 bg-gray-600 rounded-full -left-9 top-1 ring-8 ring-gray-900 mt-2"
+                >
+                  <i
+                    class="fa-sharp fa-solid fa-briefcase text-sky-400 text-sm"
+                  ></i>
+                </span>
+                <div class="px-4">
+                  <time class="block text-left text-sm font-normal text-gray-400"
+                    >Septiembre 2021 - Septiembre 2022
+                  </time>
+                  <h3
+                    class="flex items-center text-left text-lg font-semibold text-gray-500 text-white"
+                  >
+                    THE BLACK PUMA Ai
+                  </h3>
+                  <p class="font-extralight text-left">
+                    Analista Funcional GIS | QA
+                  </p>
+                </div>
+                <i
+                  class="fa-sharp fa-solid fa-plus text-sky-400 text-md peer-checked:hidden mt-3"
+                ></i>
+                <i
+                  class="fa-sharp fa-solid fa-minus text-sky-400 text-md hidden peer-checked:inline-block mt-3"
+                ></i>
+                <p
+                  class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
+                >
+                  <i
+                    class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
+                  ></i
+                  >Soporte en análisis de datos espaciales y desarrollo de
+                  procesos GIS en librerías geoespaciales de Python.
+                </p>
+                <p
+                  class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
+                >
+                  Se construyó la solución que se encuentra implementada
+                  actualmente en el proyecto
+                  <span class="font-semibold">Ciudad3D</span> de Ciudad de Buenos
+                  Aires para el cálculo automatizado de volumetrías a partir del
+                  Código Urbanístico.
+                </p>
+                <hr
+                  class="w-4/5 mx-auto border-dotted border-sky-400 px-4 mt-5 hidden peer-checked:block"
+                />
+              </li>
+              <!-- ==================================================OTRO ITEM================================================== -->
+              <li class="mb-10 ml-6 relative">
+                <input
+                  type="checkbox"
+                  class="peer ver-mas absolute cursor-pointer inset-x-0 w-full h-full h-12 opacity-0"
+                />
+                <span
+                  class="absolute flex items-center justify-center w-6 h-6 bg-gray-600 rounded-full -left-9 top-1 ring-8 ring-gray-900 mt-2"
+                >
+                  <i
+                    class="fa-sharp fa-solid fa-briefcase text-sky-400 text-sm"
+                  ></i>
+                </span>
+                <div class="px-4">
+                  <time class="block text-left text-sm font-normal text-gray-400"
+                    >Septiembre 2021 - Septiembre 2022
+                  </time>
+                  <h3
+                    class="flex items-center text-left text-lg font-semibold text-gray-500 text-white"
+                  >
+                    UNCPBA - SpaceSur - World Food Programme | United Nations
+                  </h3>
+                  <p class="font-extralight text-left">
+                    Tutor de formación | Co-coordinador del programa
+                  </p>
+                </div>
+                <i
+                  class="fa-sharp fa-solid fa-plus text-sky-400 text-md peer-checked:hidden mt-3"
+                ></i>
+                <i
+                  class="fa-sharp fa-solid fa-minus text-sky-400 text-md hidden peer-checked:inline-block mt-3"
+                ></i>
+                <p
+                  class="text-left text-base font-extralight text-zinc-300 px-4 mt-2 hidden peer-checked:block"
+                >
+                  <i
+                    class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
+                  ></i
+                  >Programa de formación y consultoría en Sistemas de Información
+                  Geográfica, Sensores remotos y cartografía para gestión de
+                  emergencias en plataforma webGIS basada en Geonode 4.0. <br /><i
+                    class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
+                  ></i
+                  >Basado en ArcGIS Pro y QGIS<br /><i
+                    class="fa-solid fa-circle text-[0.4rem] text-sky-400 align-middle mr-2"
+                  ></i
+                  >Consultoría para aplicación de capacidades transferidas basada
+                  en una emergencia real por paso de huracán en Centroamérica.
+                </p>
+                <hr
+                  class="w-4/5 mx-auto border-dotted border-sky-400 px-4 mt-5 hidden peer-checked:block"
+                />
+              </li>
+              <!-- ==================================================OTRO ITEM================================================== -->
+              <!-- ==================================================OTRO ITEM================================================== -->
+              <!-- ==================================================OTRO ITEM================================================== -->
+            </ol>
+          </div>
+          <div class="flex flex-col w-2/6 mx-auto">
+            <div class="h-1/2">
+              <h5 class="text-2xl mb-5">Links de interés</h5>
+              <div class="flex justify-around">
+                <a href="http://mapa.tandil.gov.ar/IdeTandil/" target="_blank">
+                  <figure>
+                    <img
+                      src="img/ide-tandil.png"
+                      alt=""
+                      class="border-2 border-gray-400 rounded-lg h-20 w-[200px] object-cover hover:border-gray-300"
+                    />
+                    <figcaption>IDE Tandil</figcaption>
+                  </figure>
+                </a>
+                <a href="https://ciudad3d.buenosaires.gob.ar/" target="_blank">
+                  <figure>
+                    <img
+                      src="img/c3d.png"
+                      alt=""
+                      class="border-2 border-gray-400 rounded-lg h-20 w-[200px] object-cover hover:border-gray-300"
+                    />
+                    <figcaption>Ciudad 3D</figcaption>
+                  </figure>
+                </a>
+              </div>
+            </div>
+            <div class="h-1/2 my-auto">
+              <div class="text-center">
+                <h4 class="text-3xl">
+                  ¿Te gustaría conocer más sobre mi trayectoria profesional?
+                </h4>
+              </div>
+              <a href="src/CV Mauro ortmann Jul2023.pdf" target="_blank">
+                <button
+                  class="w-48 border py-2 px-4 mx-auto my-10 rounded-full border-sky-600 hover:bg-sky-600 transition ease-in delay-150"
+                >
+                  Descargar CV<i
+                    class="fa-solid fa-file-arrow-down text-sky-400 ml-3"
+                  ></i>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CONTACTO -->
+      <section
+        id="contact"
+        class="bg-gray-700 p-4 lg:ml-64 flex flex-col justify-between h-screen"
+      >
+        <div class="flex text-center my-5 relative">
+          <h2
+            class="text-9xl font-bold text-gray-900 opacity-50 text-uppercase w-full tracking-wider"
+          >
+            Contacto
+          </h2>
+          <p
+            class="text-5xl text-slate-50 absolute mx-auto self-center inset-x-0 top-8 z-1"
+          >
+            Contacto<span
+              class="border-sky-600 border-2 block w-1/12 mx-auto my-2"
+            ></span>
+          </p>
+        </div>
+        <div class="text-slate-50 flex justify-center my-auto px-10">
+          <div class="w-fit h-fit self-center p-5">
+            <h4 class="text-2xl mb-10">
+              Visitá mi perfil en LinkedIn o escribime un correo
+            </h4>
+            <div class="p-10">
+              <a
+                href="https://www.linkedin.com/in/mauro-ortmann/"
+                target="_blank"
+              >
+                <div class="flex items-center hover:opacity-75">
+                  <div
+                    class="w-16 h-16 bg-sky-600 rounded-full flex justify-center mr-5"
+                  >
+                    <i
+                      class="fa-brands fa-linkedin text-slate-50 text-4xl self-center"
+                    ></i>
+                  </div>
+                  <span class="font-light text-xl"
+                    >linkedin.com/in/mauro-ortmann/</span
+                  >
+                </div>
+              </a>
+              <hr class="border-sky-600 my-8" />
+              <a
+                href="https://www.linkedin.com/in/mauro-ortmann/"
+                target="_blank"
+              >
+                <div class="flex items-center hover:opacity-75">
+                  <div
+                    class="w-16 h-16 bg-sky-600 rounded-full flex justify-center mr-5"
+                  >
+                    <i
+                      class="fa-solid fa-envelope text-slate-50 text-4xl self-center"
+                    ></i>
+                  </div>
+                  <span class="font-light text-xl">mauro.ortmann@gmail.com</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- FOOTER -->
     <footer
-      class="bg-gray-800 p-4 lg:ml-64 text-center text-slate-50 h-[6vh] flex justify-center items-center"
+      class="bg-gray-800 p-4 lg:ml-64 text-center text-slate-50 flex justify-center items-center"
     >
       <p>&#169; Mauro Ortmann 2023</p>
     </footer>
@@ -1195,27 +1207,10 @@
         console.log("Cambia idioma");
       }
     </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const navLinks = document.querySelectorAll("nav a");
-
-        window.addEventListener("scroll", function () {
-          const currentScroll = window.pageYOffset + 300;
-
-          navLinks.forEach((link) => {
-            const section = document.querySelector(link.getAttribute("href"));
-
-            if (
-              section.offsetTop <= currentScroll &&
-              section.offsetTop + section.offsetHeight > currentScroll
-            ) {
-              link.classList.add("font-bold");
-            } else {
-              link.classList.remove("font-bold");
-            }
-          });
-        });
-      });
-    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
